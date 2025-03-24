@@ -8,22 +8,22 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         body {
-            background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+            background: linear-gradient(to bottom right, #eef2f7, #ffffff);
         }
         header {
             backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(255, 255, 255, 0.9);
         }
         .project-card {
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
         }
         footer {
             background: linear-gradient(to right, #4f46e5, #3b82f6);
-            color: #ffffff;
+            color: #fff;
         }
     </style>
 </head>
@@ -33,6 +33,8 @@
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
                 <a href="#projects" class="mx-3 hover:text-blue-600">Projects</a>
+                <a href="#technical" class="mx-3 hover:text-blue-600">Technical Reports</a>
+                <a href="#gallery" class="mx-3 hover:text-blue-600">Project Gallery</a>
                 <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
             </nav>
@@ -41,40 +43,66 @@
 
     <main class="container mx-auto px-6 py-12">
         <section class="text-center py-20">
-            <h2 class="text-5xl font-extrabold mb-4">Hey! I'm Hunter 👋</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Future Data Scientist & Software Engineer with a passion for solving real problems through data and tech. Currently studying at Louisiana Tech University.</p>
-            <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all">See My Projects</a>
+            <h2 class="text-5xl font-extrabold mb-4">Welcome — I’m Hunter Harris</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder and problem-solver with a passion for making tech practical, beautiful, and accessible. Currently studying at Louisiana Tech University, aiming for a future in data science and software engineering.</p>
+            <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all">Explore My Work</a>
         </section>
 
         <section id="projects" class="py-20">
-            <h3 class="text-4xl font-bold mb-12 text-center">My Work</h3>
+            <h3 class="text-4xl font-bold mb-12 text-center">Featured Projects</h3>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow project-card">
+                    <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
+                    <p class="mb-4">Real-time water quality monitoring device designed with Arduino and SolidWorks, addressing safety, cost, and user-friendly challenges.</p>
+                    <a href="#technical-water" class="text-blue-600 hover:underline">Read Technical Report</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">An accessibility tool that uses computer vision for real-time eye tracking, enabling drawing, writing, and cursor control for those with disabilities.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Project Overview</a>
+                    <p class="mb-4">An accessibility tool using computer vision and velocity prediction formulas to enable smooth mouse control and drawing via eye movement.</p>
+                    <a href="#technical-eye" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">A sleek, Raspberry Pi-powered smart mirror that displays personalized data and entertainment, fully controllable via a custom app.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Project Overview</a>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow project-card">
-                    <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">A smart device that detects water contamination in real-time and alerts users, blending IoT engineering with practical safety applications.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Project Overview</a>
+                    <p class="mb-4">A smart mirror built for custom media control via Flutter app and Raspberry Pi, designed for affordability and customization.</p>
+                    <a href="#technical-mirror" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20 bg-gray-100 rounded-xl">
+        <section id="technical" class="py-20 bg-gray-100 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Technical Project Details</h3>
+            <div class="space-y-12">
+                <div id="technical-water">
+                    <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
+                    <p class="mb-4">Built using Arduino with complex design challenges, from maintaining water pressure to fitting sensors, batteries, and user-friendly LCD displays. Constraints included budget, space, and time, and the final solution involved simplifying output for end-users using recommended safety thresholds from the National Health Services. Collaborated with a team of three using SolidWorks and manual mockups.</p>
+                </div>
+                <div id="technical-eye">
+                    <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
+                    <p class="mb-4">This Python-based project faced threading challenges, solved through queue systems and predictive velocity smoothing. It included GPIO input requirements solved with a custom-built foot pedal. We demonstrated the project on a large display at the showcase; it was received enthusiastically by visitors and children. Team of three developers, requiring extensive creative problem solving.</p>
+                </div>
+                <div id="technical-mirror">
+                    <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
+                    <p class="mb-4">Built solo as a personal project. Used a Raspberry Pi, a custom Flutter app for smartphone control, and an acrylic two-way mirror with custom server hosting for secure communication. Overcame cost and complexity constraints while learning two new coding languages and implementing IP masking on GitHub-hosted servers. Future goals include touch screen and voice controls.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-20">
+            <h3 class="text-4xl font-bold mb-6 text-center">Project Gallery</h3>
+            <p class="text-center mb-8 text-lg">Images and mockups will be added here as projects are documented.</p>
+            <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
+                <p>Image upload area placeholder — coming soon.</p>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-50 rounded-xl">
             <h3 class="text-4xl font-bold mb-8 text-center">About Me</h3>
-            <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">I'm Hunter, a military veteran and builder by heart. Whether it's software, hardware, or exploring data, I love turning ideas into reality. I'm currently pursuing Computer Information Systems at Louisiana Tech University and transitioning into data science and machine learning. I value collaboration, creativity, and constant learning.</p>
+            <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">I’m Hunter — a military veteran and tech enthusiast who builds things that matter. From water safety devices to AI-driven tools and smart home tech, I love turning ideas into working prototypes. Currently a student at Louisiana Tech University, working toward careers in data science and software engineering. Open to collaborations and learning opportunities.</p>
         </section>
 
         <section id="contact" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Let’s Connect</h3>
-            <p class="text-center text-lg mb-6">Want to collaborate, ask questions, or talk tech? Reach out below!</p>
+            <h3 class="text-4xl font-bold mb-6 text-center">Let’s Collaborate</h3>
+            <p class="text-center text-lg mb-6">Got a project idea or want to connect? Reach out to me anytime.</p>
             <div class="text-center space-x-6">
                 <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
                 <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
@@ -84,7 +112,7 @@
     </main>
 
     <footer class="text-center p-6 mt-10">
-        <p>&copy; 2025 Hunter Harris — Built with curiosity, creativity, and coffee ☕</p>
+        <p>&copy; 2025 Hunter Harris — Built with creativity, curiosity, and code ☕</p>
     </footer>
 
     <script>
