@@ -25,16 +25,6 @@
             background: linear-gradient(to right, #4f46e5, #3b82f6);
             color: #fff;
         }
-        .technical-section {
-            display: none;
-            margin-top: 2rem;
-            padding: 2rem;
-            background-color: #f9fafb;
-            border-radius: 1rem;
-        }
-        .technical-section.active {
-            display: block;
-        }
     </style>
 </head>
 <body class="text-gray-900 font-sans">
@@ -44,6 +34,7 @@
             <nav>
                 <a href="#projects" class="mx-3 hover:text-blue-600">Projects</a>
                 <a href="#gallery" class="mx-3 hover:text-blue-600">Gallery</a>
+                <a href="#software-demo" class="mx-3 hover:text-blue-600">Software Demo</a>
                 <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
             </nav>
@@ -62,33 +53,26 @@
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
                     <p class="mb-4">A real-time IoT water tester that detects pollutants and displays safety warnings.</p>
-                    <button onclick="showTechnical('water')" class="text-blue-600 hover:underline">View Technical Report</button>
+                    <a href="water-tester.html" class="text-blue-600 hover:underline">See Full Project Page</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
                     <p class="mb-4">A tool for eye-controlled cursor movement, built with Python and clever multithreading workarounds.</p>
-                    <button onclick="showTechnical('eye')" class="text-blue-600 hover:underline">View Technical Report</button>
+                    <a href="ai-eye-tracker.html" class="text-blue-600 hover:underline">See Full Project Page</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
                     <p class="mb-4">A custom smart mirror with app control, designed for home convenience and personalization.</p>
-                    <button onclick="showTechnical('mirror')" class="text-blue-600 hover:underline">View Technical Report</button>
+                    <a href="magic-mirror.html" class="text-blue-600 hover:underline">See Full Project Page</a>
                 </div>
             </div>
+        </section>
 
-            <div id="technical-water" class="technical-section">
-                <h4 class="text-3xl font-bold mb-4">Water Tester — Full Technical Details</h4>
-                <p>This project was built to measure water pollutants in real-time. The design used Arduino and required careful balance between water pressure and sensor dwell time. I designed the casing in SolidWorks, ensuring it could house batteries, wiring, sensors, and an LCD without looking clunky. Limitations included budget, time, and consumer-friendliness. Despite these, we delivered a working prototype that could be further refined for commercial use. Team size: 3.</p>
-            </div>
-
-            <div id="technical-eye" class="technical-section">
-                <h4 class="text-3xl font-bold mb-4">AI Eye Tracker — Full Technical Details</h4>
-                <p>Built with Python, OpenCV, and custom velocity prediction formulas. Faced major issues with threading limitations, which were resolved using a queuing workaround. We also built a GPIO-based foot pedal (modeled in SolidWorks and 3D printed) to satisfy input constraints. Presented at a showcase where attendees, especially kids, enjoyed interacting with it. Team size: 3.</p>
-            </div>
-
-            <div id="technical-mirror" class="technical-section">
-                <h4 class="text-3xl font-bold mb-4">Magic Mirror — Full Technical Details</h4>
-                <p>This solo project used a Raspberry Pi and a Flutter-based mobile app to communicate and control mirror displays. Cost efficiency was achieved by using an acrylic sheet with two-way mirror film. Key technical challenges included secure communication setup, and future goals include adding voice or touch controls.</p>
+        <section id="software-demo" class="py-20 bg-gray-50 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Interactive Software Demo</h3>
+            <p class="text-center text-lg mb-6">Here’s a live JavaScript-based mouse tracker that simulates the AI Eye Tracker concept!</p>
+            <div id="tracker-demo" class="w-full h-96 bg-gray-200 rounded-xl relative">
+                <div id="dot" style="position: absolute; width: 30px; height: 30px; background-color: red; border-radius: 50%; transition: all 0.1s;"></div>
             </div>
         </section>
 
@@ -114,13 +98,17 @@
     </footer>
 
     <script>
-        function showTechnical(project) {
-            document.querySelectorAll('.technical-section').forEach(section => section.classList.remove('active'));
-            document.getElementById(`technical-${project}`).classList.add('active');
-            window.location.hash = `technical-${project}`;
-        }
-
         ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
+
+        // Software engineering showcase demo — live tracker
+        const dot = document.getElementById('dot');
+        document.getElementById('tracker-demo').addEventListener('mousemove', e => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left - 15;
+            const y = e.clientY - rect.top - 15;
+            dot.style.left = `${x}px`;
+            dot.style.top = `${y}px`;
+        });
     </script>
 </body>
 </html>
