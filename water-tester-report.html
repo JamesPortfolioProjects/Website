@@ -1,44 +1,64 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Water Quality Tester - Technical Report</title></head><body><h1>Water Quality Tester - Full Technical Report</h1><p>**Water Quality Tester — Technical Report**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Tester - Technical Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans px-6 py-10">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4">Water Quality Tester — Technical Report</h1>
 
-**1. Introduction**
-The Water Quality Tester is a real-time device designed to monitor tap water safety and provide users with immediate insights into water contamination levels. This project was completed as part of an engineering course at Louisiana Tech University and entered into a class competition. The motivation behind this project was to address common community concerns over water safety, particularly in areas where city filtration systems may not suffice.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">1. Introduction</h2>
+        <p class="mb-4">The Water Quality Tester is a real-time device designed to monitor tap water safety and provide users with immediate insights into water contamination levels. This project was completed as part of an engineering course at Louisiana Tech University and entered into a class competition. The motivation behind this project was to address common community concerns over water safety, particularly in areas where city filtration systems may not suffice.</p>
 
-**2. Objectives**
-- Develop a device that measures water quality in real time.
-- Ensure the device remains cost-effective and compact for practical consumer use.
-- Display results via an LCD to inform users clearly and quickly.
-- Maintain sufficient water flow and pressure despite sensor placement.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">2. Objectives</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Develop a device that measures water quality in real time.</li>
+            <li>Ensure the device remains cost-effective and compact for practical consumer use.</li>
+            <li>Display results via an LCD to inform users clearly and quickly.</li>
+            <li>Maintain sufficient water flow and pressure despite sensor placement.</li>
+        </ul>
 
-**3. Design & Planning**
-The team selected a TDS (Total Dissolved Solids) sensor due to its affordability and reliability within the project’s constraints. The mechanical design involved integrating the sensor within a water flow system connected to standard faucets. This design also had to accommodate the Arduino microcontroller, wiring, power supply, and an LCD screen.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">3. Design & Planning</h2>
+        <p class="mb-4">The team selected a TDS (Total Dissolved Solids) sensor due to its affordability and reliability within the project’s constraints. The mechanical design involved integrating the sensor within a water flow system connected to standard faucets. This design also had to accommodate the Arduino microcontroller, wiring, power supply, and an LCD screen.</p>
+        <p class="mb-4">Key considerations included:</p>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Housing all electronics in a water-resistant casing.</li>
+            <li>Balancing internal flow pressure with accurate measurement timing.</li>
+            <li>Custom faucet adapters to allow secure, consumer-friendly installation.</li>
+        </ul>
 
-Key considerations included:
-- Housing all electronics in a water-resistant casing.
-- Balancing internal flow pressure with accurate measurement timing.
-- Custom faucet adapters to allow secure, consumer-friendly installation.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">4. Technical Implementation</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li><strong>Microcontroller:</strong> Arduino Uno served as the brain of the operation.</li>
+            <li><strong>Sensor:</strong> A TDS sensor was used to detect dissolved solids indicating water quality.</li>
+            <li><strong>Output Display:</strong> The LCD module was programmed to receive continuous readings and display user-friendly metrics.</li>
+            <li><strong>Enclosure:</strong> Designed using SolidWorks, then 3D-printed and manually assembled.</li>
+            <li><strong>Software:</strong> Custom Arduino code gathered sensor input, filtered the data, compared it against national water safety benchmarks, and displayed visual indicators (safe, warning, danger) on the LCD.</li>
+        </ul>
 
-**4. Technical Implementation**
-- **Microcontroller:** Arduino Uno served as the brain of the operation.
-- **Sensor:** A TDS sensor was used to detect dissolved solids indicating water quality.
-- **Output Display:** The LCD module was programmed to receive continuous readings and display user-friendly metrics.
-- **Enclosure:** Designed using SolidWorks, then 3D-printed and manually assembled.
-- **Software:** Custom Arduino code gathered sensor input, filtered the data, compared it against national water safety benchmarks (sourced from health agencies), and displayed visual indicators (safe, warning, danger) on the LCD.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">5. Challenges Faced</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li><strong>Cost Limitations:</strong> Choosing components that fit within a student-friendly budget.</li>
+            <li><strong>Size Constraints:</strong> Balancing components in a compact consumer-friendly enclosure.</li>
+            <li><strong>Pressure Management:</strong> Ensuring stable water flow for accurate sensor readings.</li>
+            <li><strong>Data Interpretation:</strong> Converting raw sensor data into understandable consumer safety alerts.</li>
+        </ul>
 
-**5. Challenges Faced**
-- **Cost Limitations:** The team had to choose components that fit within a student-friendly budget.
-- **Size Constraints:** Balancing all components while maintaining a small, consumer-friendly footprint.
-- **Pressure Management:** Ensuring water flow was smooth enough for sensor reading yet strong enough for practical faucet use.
-- **Data Interpretation:** Translating raw TDS data into consumer-friendly safety indicators.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">6. Testing & Validation</h2>
+        <p class="mb-4">The prototype was tested using multiple water sources including tap, filtered, and contaminated samples. Results showed clear readings and user-friendly warnings aligned with safety benchmarks.</p>
 
-**6. Testing & Validation**
-The prototype was tested with various water samples — filtered water, tap water, and intentionally contaminated samples. The device successfully detected relative changes in contamination levels and displayed warnings when readings exceeded safe thresholds.
+        <h2 class="text-2xl font-semibold mt-8 mb-2">7. Limitations & Future Improvements</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Integrate additional sensors for pH, turbidity, and heavy metals.</li>
+            <li>Further miniaturization and waterproofing.</li>
+            <li>Enhance battery life and optimize energy consumption.</li>
+        </ul>
 
-**7. Limitations & Future Improvements**
-- Limited by the TDS sensor’s capabilities; future iterations could integrate pH, turbidity, and heavy metal sensors.
-- The form factor could be further miniaturized with additional funding.
-- Long-term durability and battery life optimization could enhance consumer readiness.
-
-**8. Personal Reflection**
-This project taught me about balancing mechanical design, hardware constraints, and real-time data processing. Despite budgetary and time limitations, our team delivered a functional proof-of-concept validated through real-world testing. If given more resources, I would love to optimize both hardware and software for commercial readiness and consumer trust.
-
-</p></body></html>
+        <h2 class="text-2xl font-semibold mt-8 mb-2">8. Personal Reflection</h2>
+        <p>This project taught me to balance mechanical design, budget constraints, and real-time data display. Despite challenges, our team delivered a functional prototype that worked reliably in field tests. I look forward to refining this design for real consumer use in the future.</p>
+    </div>
+</body>
+</html>
