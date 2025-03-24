@@ -33,7 +33,6 @@
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
                 <a href="#projects" class="mx-3 hover:text-blue-600">Projects</a>
-                <a href="#technical" class="mx-3 hover:text-blue-600">Technical Reports</a>
                 <a href="#gallery" class="mx-3 hover:text-blue-600">Project Gallery</a>
                 <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
@@ -54,50 +53,42 @@
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
                     <p class="mb-4">Real-time water quality monitoring device designed with Arduino and SolidWorks, addressing safety, cost, and user-friendly challenges.</p>
-                    <a href="#technical-water" class="text-blue-600 hover:underline">Read Technical Report</a>
+                    <a href="#technical-water" class="text-blue-600 hover:underline">View Technical Details</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
                     <p class="mb-4">An accessibility tool using computer vision and velocity prediction formulas to enable smooth mouse control and drawing via eye movement.</p>
-                    <a href="#technical-eye" class="text-blue-600 hover:underline">Read Technical Report</a>
+                    <a href="#technical-eye" class="text-blue-600 hover:underline">View Technical Details</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
                     <p class="mb-4">A smart mirror built for custom media control via Flutter app and Raspberry Pi, designed for affordability and customization.</p>
-                    <a href="#technical-mirror" class="text-blue-600 hover:underline">Read Technical Report</a>
+                    <a href="#technical-mirror" class="text-blue-600 hover:underline">View Technical Details</a>
                 </div>
             </div>
         </section>
 
-        <section id="technical" class="py-20 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">Technical Project Details</h3>
-            <div class="space-y-12">
-                <div id="technical-water">
-                    <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">Built using Arduino with complex design challenges, from maintaining water pressure to fitting sensors, batteries, and user-friendly LCD displays. Constraints included budget, space, and time, and the final solution involved simplifying output for end-users using recommended safety thresholds from the National Health Services. Collaborated with a team of three using SolidWorks and manual mockups.</p>
-                </div>
-                <div id="technical-eye">
-                    <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">This Python-based project faced threading challenges, solved through queue systems and predictive velocity smoothing. It included GPIO input requirements solved with a custom-built foot pedal. We demonstrated the project on a large display at the showcase; it was received enthusiastically by visitors and children. Team of three developers, requiring extensive creative problem solving.</p>
-                </div>
-                <div id="technical-mirror">
-                    <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">Built solo as a personal project. Used a Raspberry Pi, a custom Flutter app for smartphone control, and an acrylic two-way mirror with custom server hosting for secure communication. Overcame cost and complexity constraints while learning two new coding languages and implementing IP masking on GitHub-hosted servers. Future goals include touch screen and voice controls.</p>
-                </div>
-            </div>
+        <section id="technical-water" class="py-16 bg-gray-50 rounded-xl">
+            <h4 class="text-3xl font-bold mb-4 text-center">Water Quality Tester — Full Technical Overview</h4>
+            <p class="max-w-4xl mx-auto text-lg leading-relaxed">This water tester was designed to measure pollutants and water quality in real time. We used Arduino with custom pressure designs and SolidWorks for housing. Key challenges included maintaining flow, cost constraints (leading to less precise sensors and size trade-offs), and display simplicity for the user. The output values were aligned with National Health Services benchmarks. I collaborated with a team of three, and if given more time and resources, I would optimize accuracy, add LCD integration, and shrink the design further.</p>
+        </section>
+
+        <section id="technical-eye" class="py-16 bg-gray-50 rounded-xl">
+            <h4 class="text-3xl font-bold mb-4 text-center">AI Eye Tracker — Full Technical Overview</h4>
+            <p class="max-w-4xl mx-auto text-lg leading-relaxed">This project leveraged Python with OpenCV libraries for continuous facial tracking, despite Python’s threading limitations. We used queueing and a custom velocity-smoothing algorithm to create smooth transitions. GPIO requirements were fulfilled using a custom-built foot pedal. Time constraints and a team of three pushed us to innovate on limited resources. The final showcase received extremely positive feedback, especially from children interacting with the tech.</p>
+        </section>
+
+        <section id="technical-mirror" class="py-16 bg-gray-50 rounded-xl">
+            <h4 class="text-3xl font-bold mb-4 text-center">Magic Mirror — Full Technical Overview</h4>
+            <p class="max-w-4xl mx-auto text-lg leading-relaxed">Built solo as a holiday project for Alma, this magic mirror uses a Raspberry Pi and an affordable acrylic two-way mirror with custom server communication. A Flutter app allows for remote customization and control. Future improvements include voice or touch controls and professional-grade smoothing. I learned new coding languages and server security practices during this build and plan to continue refining it.</p>
         </section>
 
         <section id="gallery" class="py-20">
             <h3 class="text-4xl font-bold mb-6 text-center">Project Gallery</h3>
-            <p class="text-center mb-8 text-lg">Images and mockups will be added here as projects are documented.</p>
+            <p class="text-center mb-8 text-lg">Image placeholders — ready for uploads.</p>
             <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-                <p>Image upload area placeholder — coming soon.</p>
+                <p>Image upload area coming soon.</p>
             </div>
-        </section>
-
-        <section id="about" class="py-20 bg-gray-50 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">About Me</h3>
-            <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">I’m Hunter — a military veteran and tech enthusiast who builds things that matter. From water safety devices to AI-driven tools and smart home tech, I love turning ideas into working prototypes. Currently a student at Louisiana Tech University, working toward careers in data science and software engineering. Open to collaborations and learning opportunities.</p>
         </section>
 
         <section id="contact" class="py-20">
