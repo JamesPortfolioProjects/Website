@@ -6,9 +6,29 @@
     <title>Hunter Harris - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+        }
+        header {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: linear-gradient(to right, #4f46e5, #3b82f6);
+            color: #ffffff;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-    <header class="bg-white shadow p-6 sticky top-0 z-50">
+<body class="text-gray-900 font-sans">
+    <header class="shadow p-6 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
@@ -20,55 +40,55 @@
     </header>
 
     <main class="container mx-auto px-6 py-12">
-        <section class="text-center py-10">
-            <h2 class="text-5xl font-bold mb-4">Hey! I'm Hunter 👋</h2>
-            <p class="text-xl mb-6 max-w-2xl mx-auto">An aspiring Data Scientist & Software Engineer with a passion for solving real-world problems and making technology accessible. Currently studying Computer Information Systems at Louisiana Tech University.</p>
-            <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition">Check Out My Work</a>
+        <section class="text-center py-20">
+            <h2 class="text-5xl font-extrabold mb-4">Hey! I'm Hunter 👋</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Future Data Scientist & Software Engineer with a passion for solving real problems through data and tech. Currently studying at Louisiana Tech University.</p>
+            <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all">See My Projects</a>
         </section>
 
-        <section id="projects" class="py-16 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-10 text-center">My Projects</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition transform hover:-translate-y-1">
+        <section id="projects" class="py-20">
+            <h3 class="text-4xl font-bold mb-12 text-center">My Work</h3>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">An accessibility tool using real-time face and eye detection to let users control their cursor and write or draw with their eyes.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    <p class="mb-4">An accessibility tool that uses computer vision for real-time eye tracking, enabling drawing, writing, and cursor control for those with disabilities.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Project Overview</a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">A Raspberry Pi-powered smart mirror that displays weather, notifications, and media, designed for convenience and custom control.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    <p class="mb-4">A sleek, Raspberry Pi-powered smart mirror that displays personalized data and entertainment, fully controllable via a custom app.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Project Overview</a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">A real-time IoT monitoring tool that alerts users when faucet water is unsafe, combining sensors, data, and smart notifications.</p>
-                    <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    <p class="mb-4">A smart device that detects water contamination in real-time and alerts users, blending IoT engineering with practical safety applications.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Project Overview</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-16">
+        <section id="about" class="py-20 bg-gray-100 rounded-xl">
             <h3 class="text-4xl font-bold mb-8 text-center">About Me</h3>
-            <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">I’m Hunter — a proud military veteran and a tech builder at heart. I love bringing ideas to life with code and hardware. From hands-on projects like smart mirrors and water testers to diving into the world of data and machine learning, I’m constantly learning and building. Currently, I’m a student at Louisiana Tech University, working towards a career in Data Science and Software Engineering. If you want to collaborate, chat about tech, or just share cool ideas — I’m all ears!</p>
+            <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">I'm Hunter, a military veteran and builder by heart. Whether it's software, hardware, or exploring data, I love turning ideas into reality. I'm currently pursuing Computer Information Systems at Louisiana Tech University and transitioning into data science and machine learning. I value collaboration, creativity, and constant learning.</p>
         </section>
 
-        <section id="contact" class="py-16 bg-blue-50 rounded-xl">
-            <h3 class="text-4xl font-bold mb-6 text-center">Get in Touch</h3>
-            <p class="text-center text-lg mb-6">Reach out for collaborations, questions, or just to say hello.</p>
-            <div class="text-center">
-                <a href="mailto:importantemailsforjames@gmail.com" class="text-blue-700 hover:underline mx-4">Email</a>
-                <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="text-blue-700 hover:underline mx-4">LinkedIn</a>
-                <a href="https://github.com/YourGitHubUsername" target="_blank" class="text-blue-700 hover:underline mx-4">GitHub</a>
+        <section id="contact" class="py-20">
+            <h3 class="text-4xl font-bold mb-6 text-center">Let’s Connect</h3>
+            <p class="text-center text-lg mb-6">Want to collaborate, ask questions, or talk tech? Reach out below!</p>
+            <div class="text-center space-x-6">
+                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
+                <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
+                <a href="https://github.com/YourGitHubUsername" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">GitHub</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-white text-center p-6 shadow-inner mt-10">
-        <p class="text-gray-600">&copy; 2025 Hunter Harris | Built with curiosity and caffeine ☕</p>
+    <footer class="text-center p-6 mt-10">
+        <p>&copy; 2025 Hunter Harris — Built with curiosity, creativity, and coffee ☕</p>
     </footer>
 
     <script>
-        ScrollReveal().reveal('section', { delay: 200, distance: '50px', origin: 'bottom', reset: true });
+        ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
     </script>
 </body>
 </html>
