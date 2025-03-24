@@ -25,6 +25,16 @@
             background: linear-gradient(to right, #4f46e5, #3b82f6);
             color: #fff;
         }
+        .technical-section {
+            display: none;
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: #f9fafb;
+            border-radius: 1rem;
+        }
+        .technical-section.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="text-gray-900 font-sans">
@@ -33,7 +43,7 @@
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
                 <a href="#projects" class="mx-3 hover:text-blue-600">Projects</a>
-                <a href="#gallery" class="mx-3 hover:text-blue-600">Project Gallery</a>
+                <a href="#gallery" class="mx-3 hover:text-blue-600">Gallery</a>
                 <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
             </nav>
@@ -43,59 +53,56 @@
     <main class="container mx-auto px-6 py-12">
         <section class="text-center py-20">
             <h2 class="text-5xl font-extrabold mb-4">Welcome — I’m Hunter Harris</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder and problem-solver with a passion for making tech practical, beautiful, and accessible. Currently studying at Louisiana Tech University, aiming for a future in data science and software engineering.</p>
-            <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all">Explore My Work</a>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder and problem-solver who loves bringing ideas to life with tech. Studying at Louisiana Tech University, aiming for a career in data science and software engineering.</p>
         </section>
 
         <section id="projects" class="py-20">
-            <h3 class="text-4xl font-bold mb-12 text-center">Featured Projects</h3>
+            <h3 class="text-4xl font-bold mb-12 text-center">My Work</h3>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">Real-time water quality monitoring device designed with Arduino and SolidWorks, addressing safety, cost, and user-friendly challenges.</p>
-                    <a href="#technical-water" class="text-blue-600 hover:underline">View Technical Details</a>
+                    <p class="mb-4">A real-time IoT water tester that detects pollutants and displays safety warnings.</p>
+                    <button onclick="showTechnical('water')" class="text-blue-600 hover:underline">View Technical Report</button>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">An accessibility tool using computer vision and velocity prediction formulas to enable smooth mouse control and drawing via eye movement.</p>
-                    <a href="#technical-eye" class="text-blue-600 hover:underline">View Technical Details</a>
+                    <p class="mb-4">A tool for eye-controlled cursor movement, built with Python and clever multithreading workarounds.</p>
+                    <button onclick="showTechnical('eye')" class="text-blue-600 hover:underline">View Technical Report</button>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow project-card">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">A smart mirror built for custom media control via Flutter app and Raspberry Pi, designed for affordability and customization.</p>
-                    <a href="#technical-mirror" class="text-blue-600 hover:underline">View Technical Details</a>
+                    <p class="mb-4">A custom smart mirror with app control, designed for home convenience and personalization.</p>
+                    <button onclick="showTechnical('mirror')" class="text-blue-600 hover:underline">View Technical Report</button>
                 </div>
+            </div>
+
+            <div id="technical-water" class="technical-section">
+                <h4 class="text-3xl font-bold mb-4">Water Tester — Full Technical Details</h4>
+                <p>This project was built to measure water pollutants in real-time. The design used Arduino and required careful balance between water pressure and sensor dwell time. I designed the casing in SolidWorks, ensuring it could house batteries, wiring, sensors, and an LCD without looking clunky. Limitations included budget, time, and consumer-friendliness. Despite these, we delivered a working prototype that could be further refined for commercial use. Team size: 3.</p>
+            </div>
+
+            <div id="technical-eye" class="technical-section">
+                <h4 class="text-3xl font-bold mb-4">AI Eye Tracker — Full Technical Details</h4>
+                <p>Built with Python, OpenCV, and custom velocity prediction formulas. Faced major issues with threading limitations, which were resolved using a queuing workaround. We also built a GPIO-based foot pedal (modeled in SolidWorks and 3D printed) to satisfy input constraints. Presented at a showcase where attendees, especially kids, enjoyed interacting with it. Team size: 3.</p>
+            </div>
+
+            <div id="technical-mirror" class="technical-section">
+                <h4 class="text-3xl font-bold mb-4">Magic Mirror — Full Technical Details</h4>
+                <p>This solo project used a Raspberry Pi and a Flutter-based mobile app to communicate and control mirror displays. Cost efficiency was achieved by using an acrylic sheet with two-way mirror film. Key technical challenges included secure communication setup, and future goals include adding voice or touch controls.</p>
             </div>
         </section>
 
-        <section id="technical-water" class="py-16 bg-gray-50 rounded-xl">
-            <h4 class="text-3xl font-bold mb-4 text-center">Water Quality Tester — Full Technical Overview</h4>
-            <p class="max-w-4xl mx-auto text-lg leading-relaxed">This water tester was designed to measure pollutants and water quality in real time. We used Arduino with custom pressure designs and SolidWorks for housing. Key challenges included maintaining flow, cost constraints (leading to less precise sensors and size trade-offs), and display simplicity for the user. The output values were aligned with National Health Services benchmarks. I collaborated with a team of three, and if given more time and resources, I would optimize accuracy, add LCD integration, and shrink the design further.</p>
-        </section>
-
-        <section id="technical-eye" class="py-16 bg-gray-50 rounded-xl">
-            <h4 class="text-3xl font-bold mb-4 text-center">AI Eye Tracker — Full Technical Overview</h4>
-            <p class="max-w-4xl mx-auto text-lg leading-relaxed">This project leveraged Python with OpenCV libraries for continuous facial tracking, despite Python’s threading limitations. We used queueing and a custom velocity-smoothing algorithm to create smooth transitions. GPIO requirements were fulfilled using a custom-built foot pedal. Time constraints and a team of three pushed us to innovate on limited resources. The final showcase received extremely positive feedback, especially from children interacting with the tech.</p>
-        </section>
-
-        <section id="technical-mirror" class="py-16 bg-gray-50 rounded-xl">
-            <h4 class="text-3xl font-bold mb-4 text-center">Magic Mirror — Full Technical Overview</h4>
-            <p class="max-w-4xl mx-auto text-lg leading-relaxed">Built solo as a holiday project for Alma, this magic mirror uses a Raspberry Pi and an affordable acrylic two-way mirror with custom server communication. A Flutter app allows for remote customization and control. Future improvements include voice or touch controls and professional-grade smoothing. I learned new coding languages and server security practices during this build and plan to continue refining it.</p>
-        </section>
-
         <section id="gallery" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Project Gallery</h3>
-            <p class="text-center mb-8 text-lg">Image placeholders — ready for uploads.</p>
+            <h3 class="text-4xl font-bold mb-6 text-center">Gallery (Coming Soon)</h3>
             <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-                <p>Image upload area coming soon.</p>
+                <p>Image placeholders for upcoming uploads.</p>
             </div>
         </section>
 
         <section id="contact" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Let’s Collaborate</h3>
-            <p class="text-center text-lg mb-6">Got a project idea or want to connect? Reach out to me anytime.</p>
+            <h3 class="text-4xl font-bold mb-6 text-center">Let's Talk</h3>
             <div class="text-center space-x-6">
-                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
+                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email</a>
                 <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
                 <a href="https://github.com/YourGitHubUsername" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">GitHub</a>
             </div>
@@ -107,6 +114,12 @@
     </footer>
 
     <script>
+        function showTechnical(project) {
+            document.querySelectorAll('.technical-section').forEach(section => section.classList.remove('active'));
+            document.getElementById(`technical-${project}`).classList.add('active');
+            window.location.hash = `technical-${project}`;
+        }
+
         ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
     </script>
 </body>
