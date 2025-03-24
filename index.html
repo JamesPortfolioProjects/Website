@@ -6,35 +6,15 @@
     <title>Hunter Harris - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <style>
-        body {
-            background: linear-gradient(to bottom right, #eef2f7, #ffffff);
-        }
-        header {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: linear-gradient(to right, #4f46e5, #3b82f6);
-            color: #fff;
-        }
-    </style>
 </head>
-<body class="text-gray-900 font-sans">
-    <header class="shadow p-6 sticky top-0 z-50">
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <header class="bg-white shadow p-6 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
                 <a href="#projects" class="mx-3 hover:text-blue-600">Projects</a>
                 <a href="#gallery" class="mx-3 hover:text-blue-600">Gallery</a>
-                <a href="#software-demo" class="mx-3 hover:text-blue-600">Software Demo</a>
+                <a href="#engineering" class="mx-3 hover:text-blue-600">Engineering Showcase</a>
                 <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
             </nav>
@@ -43,72 +23,90 @@
 
     <main class="container mx-auto px-6 py-12">
         <section class="text-center py-20">
-            <h2 class="text-5xl font-extrabold mb-4">Welcome — I’m Hunter Harris</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder and problem-solver who loves bringing ideas to life with tech. Studying at Louisiana Tech University, aiming for a career in data science and software engineering.</p>
+            <h2 class="text-5xl font-bold mb-4">I'm Hunter Harris</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder, designer, and problem-solver currently studying at Louisiana Tech University. I love combining practical ideas with smart technology — focused on data science and software engineering.</p>
+            <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-lg shadow hover:bg-blue-700 transition">View My Projects</a>
         </section>
 
         <section id="projects" class="py-20">
-            <h3 class="text-4xl font-bold mb-12 text-center">My Work</h3>
+            <h3 class="text-4xl font-bold mb-12 text-center">My Projects</h3>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-6 rounded-xl shadow project-card">
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">A real-time IoT water tester that detects pollutants and displays safety warnings.</p>
-                    <a href="water-tester.html" class="text-blue-600 hover:underline">See Full Project Page</a>
+                    <p class="mb-4">A device that detects contaminants in real-time, designed with Arduino and SolidWorks, built to balance accuracy and cost.</p>
+                    <div class="flex space-x-4">
+                        <a href="water-tester.html" class="text-blue-600 hover:underline">Project Page</a>
+                        <a href="water-tester-report.html" class="text-blue-600 hover:underline">Technical Report</a>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow project-card">
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">A tool for eye-controlled cursor movement, built with Python and clever multithreading workarounds.</p>
-                    <a href="ai-eye-tracker.html" class="text-blue-600 hover:underline">See Full Project Page</a>
+                    <p class="mb-4">An accessibility tool that uses Python and velocity prediction to enable smooth eye-based cursor movement.</p>
+                    <div class="flex space-x-4">
+                        <a href="ai-eye-tracker.html" class="text-blue-600 hover:underline">Project Page</a>
+                        <a href="ai-eye-tracker-report.html" class="text-blue-600 hover:underline">Technical Report</a>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow project-card">
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">A custom smart mirror with app control, designed for home convenience and personalization.</p>
-                    <a href="magic-mirror.html" class="text-blue-600 hover:underline">See Full Project Page</a>
+                    <p class="mb-4">A custom smart mirror controlled by a Flutter app, designed for affordability and full customization.</p>
+                    <div class="flex space-x-4">
+                        <a href="magic-mirror.html" class="text-blue-600 hover:underline">Project Page</a>
+                        <a href="magic-mirror-report.html" class="text-blue-600 hover:underline">Technical Report</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="software-demo" class="py-20 bg-gray-50 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">Interactive Software Demo</h3>
-            <p class="text-center text-lg mb-6">Here’s a live JavaScript-based mouse tracker that simulates the AI Eye Tracker concept!</p>
-            <div id="tracker-demo" class="w-full h-96 bg-gray-200 rounded-xl relative">
-                <div id="dot" style="position: absolute; width: 30px; height: 30px; background-color: red; border-radius: 50%; transition: all 0.1s;"></div>
-            </div>
+        <section id="engineering" class="py-20 bg-gray-100 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Engineering & Data Science Showcase</h3>
+            <p class="text-center text-lg mb-6">Below is a live interactive data visualization powered by JavaScript, showcasing basic analytics capabilities:</p>
+            <canvas id="chart" width="400" height="200" class="mx-auto"></canvas>
         </section>
 
         <section id="gallery" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Gallery (Coming Soon)</h3>
+            <h3 class="text-4xl font-bold mb-6 text-center">Project Gallery</h3>
             <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-                <p>Image placeholders for upcoming uploads.</p>
+                <p>Images and mockups to be uploaded soon.</p>
             </div>
         </section>
 
         <section id="contact" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Let's Talk</h3>
+            <h3 class="text-4xl font-bold mb-6 text-center">Let's Connect</h3>
             <div class="text-center space-x-6">
-                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email</a>
+                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
                 <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
                 <a href="https://github.com/YourGitHubUsername" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">GitHub</a>
             </div>
         </section>
     </main>
 
-    <footer class="text-center p-6 mt-10">
-        <p>&copy; 2025 Hunter Harris — Built with creativity, curiosity, and code ☕</p>
+    <footer class="text-center p-6 mt-10 bg-white shadow-inner">
+        <p>&copy; 2025 Hunter Harris — Built with curiosity and craftsmanship.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
-
-        // Software engineering showcase demo — live tracker
-        const dot = document.getElementById('dot');
-        document.getElementById('tracker-demo').addEventListener('mousemove', e => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const x = e.clientX - rect.left - 15;
-            const y = e.clientY - rect.top - 15;
-            dot.style.left = `${x}px`;
-            dot.style.top = `${y}px`;
+        const ctx = document.getElementById('chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Project A', 'Project B', 'Project C'],
+                datasets: [{
+                    label: 'Development Hours',
+                    data: [120, 95, 140],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
         });
+
+        ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
     </script>
 </body>
 </html>
