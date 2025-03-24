@@ -12,8 +12,8 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
-                <a href="#projects" class="mx-3 hover:text-blue-600">Projects</a>
-                <a href="#gallery" class="mx-3 hover:text-blue-600">Gallery</a>
+                <a href="#projects" class="mx-3 hover:text-blue-600">Technical Reports</a>
+                <a href="#data-analysis" class="mx-3 hover:text-blue-600">Data Science Showcase</a>
                 <a href="#engineering" class="mx-3 hover:text-blue-600">Engineering Showcase</a>
                 <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
@@ -25,52 +25,40 @@
         <section class="text-center py-20">
             <h2 class="text-5xl font-bold mb-4">I'm Hunter Harris</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">A builder, designer, and problem-solver currently studying at Louisiana Tech University. I love combining practical ideas with smart technology — focused on data science and software engineering.</p>
-            <a href="#projects" class="bg-blue-600 text-white px-8 py-4 rounded-lg shadow hover:bg-blue-700 transition">View My Projects</a>
         </section>
 
         <section id="projects" class="py-20">
-            <h3 class="text-4xl font-bold mb-12 text-center">My Projects</h3>
+            <h3 class="text-4xl font-bold mb-12 text-center">Technical Reports</h3>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">An IoT-based device to detect pollutants in real-time. Designed to balance function and affordability.</p>
-                    <div class="flex space-x-4">
-                        <a href="water-tester.html" class="text-blue-600 hover:underline">Project Overview</a>
-                        <a href="water-tester-report.html" class="text-blue-600 hover:underline">Technical Report</a>
-                    </div>
+                    <p class="mb-4">A technical breakdown of the IoT-based water quality tester.</p>
+                    <a href="water-tester-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">A Python-based tool for controlling a mouse via eye movement, using predictive smoothing and custom algorithms.</p>
-                    <div class="flex space-x-4">
-                        <a href="ai-eye-tracker.html" class="text-blue-600 hover:underline">Project Overview</a>
-                        <a href="ai-eye-tracker-report.html" class="text-blue-600 hover:underline">Technical Report</a>
-                    </div>
+                    <p class="mb-4">Full documentation of the AI-based eye-tracking system.</p>
+                    <a href="ai-eye-tracker-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">A custom-built smart mirror, controlled via a Flutter app and Raspberry Pi, designed for convenience and customization.</p>
-                    <div class="flex space-x-4">
-                        <a href="magic-mirror.html" class="text-blue-600 hover:underline">Project Overview</a>
-                        <a href="magic-mirror-report.html" class="text-blue-600 hover:underline">Technical Report</a>
-                    </div>
+                    <p class="mb-4">A deep dive into the smart mirror project and its design.</p>
+                    <a href="magic-mirror-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
             </div>
         </section>
 
-        <section id="engineering" class="py-20 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">Software Engineering & Data Science Showcase</h3>
-            <p class="text-center text-lg mb-6">Interactive data visualization (showcasing simulated project data):</p>
-            <canvas id="chart" width="400" height="200" class="mx-auto mb-12"></canvas>
-            <div class="text-center mt-8">
-                <a href="live-demo.html" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">Launch Interactive Demo</a>
-            </div>
+        <section id="data-analysis" class="py-20 bg-gray-100 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Data Science & Analytics</h3>
+            <p class="text-center text-lg mb-6">Exploring real-world data related to my projects.</p>
+            <canvas id="data-chart" width="400" height="200" class="mx-auto mb-12"></canvas>
         </section>
 
-        <section id="gallery" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Project Gallery</h3>
-            <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-                <p>Image uploads coming soon.</p>
+        <section id="engineering" class="py-20 bg-gray-100 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Software Engineering Showcase</h3>
+            <p class="text-center text-lg mb-6">Live interactive coding demo coming soon.</p>
+            <div class="text-center mt-8">
+                <a href="live-demo.html" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">Launch Interactive Demo</a>
             </div>
         </section>
 
@@ -90,16 +78,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById('chart').getContext('2d');
+        const ctx = document.getElementById('data-chart').getContext('2d');
         const chart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
-                labels: ['Water Tester', 'AI Tracker', 'Magic Mirror'],
+                labels: ['City A', 'City B', 'City C', 'City D'],
                 datasets: [{
-                    label: 'Hours of Development',
-                    data: [150, 120, 180],
-                    backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
-                    borderWidth: 1
+                    label: 'Water Contamination Levels',
+                    data: [45, 78, 55, 90],
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderWidth: 2,
+                    fill: true
                 }]
             },
             options: {
