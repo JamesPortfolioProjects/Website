@@ -1,1 +1,44 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Water Quality Tester - Technical Report</title></head><body><h1>Water Quality Tester - Full Technical Report</h1><p>Comprehensive technical breakdown of the water tester project.</p></body></html>
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Water Quality Tester - Technical Report</title></head><body><h1>Water Quality Tester - Full Technical Report</h1><p>**Water Quality Tester — Technical Report**
+
+**1. Introduction**
+The Water Quality Tester is a real-time device designed to monitor tap water safety and provide users with immediate insights into water contamination levels. This project was completed as part of an engineering course at Louisiana Tech University and entered into a class competition. The motivation behind this project was to address common community concerns over water safety, particularly in areas where city filtration systems may not suffice.
+
+**2. Objectives**
+- Develop a device that measures water quality in real time.
+- Ensure the device remains cost-effective and compact for practical consumer use.
+- Display results via an LCD to inform users clearly and quickly.
+- Maintain sufficient water flow and pressure despite sensor placement.
+
+**3. Design & Planning**
+The team selected a TDS (Total Dissolved Solids) sensor due to its affordability and reliability within the project’s constraints. The mechanical design involved integrating the sensor within a water flow system connected to standard faucets. This design also had to accommodate the Arduino microcontroller, wiring, power supply, and an LCD screen.
+
+Key considerations included:
+- Housing all electronics in a water-resistant casing.
+- Balancing internal flow pressure with accurate measurement timing.
+- Custom faucet adapters to allow secure, consumer-friendly installation.
+
+**4. Technical Implementation**
+- **Microcontroller:** Arduino Uno served as the brain of the operation.
+- **Sensor:** A TDS sensor was used to detect dissolved solids indicating water quality.
+- **Output Display:** The LCD module was programmed to receive continuous readings and display user-friendly metrics.
+- **Enclosure:** Designed using SolidWorks, then 3D-printed and manually assembled.
+- **Software:** Custom Arduino code gathered sensor input, filtered the data, compared it against national water safety benchmarks (sourced from health agencies), and displayed visual indicators (safe, warning, danger) on the LCD.
+
+**5. Challenges Faced**
+- **Cost Limitations:** The team had to choose components that fit within a student-friendly budget.
+- **Size Constraints:** Balancing all components while maintaining a small, consumer-friendly footprint.
+- **Pressure Management:** Ensuring water flow was smooth enough for sensor reading yet strong enough for practical faucet use.
+- **Data Interpretation:** Translating raw TDS data into consumer-friendly safety indicators.
+
+**6. Testing & Validation**
+The prototype was tested with various water samples — filtered water, tap water, and intentionally contaminated samples. The device successfully detected relative changes in contamination levels and displayed warnings when readings exceeded safe thresholds.
+
+**7. Limitations & Future Improvements**
+- Limited by the TDS sensor’s capabilities; future iterations could integrate pH, turbidity, and heavy metal sensors.
+- The form factor could be further miniaturized with additional funding.
+- Long-term durability and battery life optimization could enhance consumer readiness.
+
+**8. Personal Reflection**
+This project taught me about balancing mechanical design, hardware constraints, and real-time data processing. Despite budgetary and time limitations, our team delivered a functional proof-of-concept validated through real-world testing. If given more resources, I would love to optimize both hardware and software for commercial readiness and consumer trust.
+
+</p></body></html>
