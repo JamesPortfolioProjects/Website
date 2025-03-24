@@ -12,10 +12,9 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">Hunter Harris</h1>
             <nav>
-                <a href="#projects" class="mx-3 hover:text-blue-600">Technical Reports</a>
-                <a href="#data-analysis" class="mx-3 hover:text-blue-600">Data Science Showcase</a>
+                <a href="#technical-reports" class="mx-3 hover:text-blue-600">Technical Reports</a>
+                <a href="#data-projects" class="mx-3 hover:text-blue-600">Data Analysis Projects</a>
                 <a href="#engineering" class="mx-3 hover:text-blue-600">Engineering Showcase</a>
-                <a href="#about" class="mx-3 hover:text-blue-600">About</a>
                 <a href="#contact" class="mx-3 hover:text-blue-600">Contact</a>
             </nav>
         </div>
@@ -24,39 +23,41 @@
     <main class="container mx-auto px-6 py-12">
         <section class="text-center py-20">
             <h2 class="text-5xl font-bold mb-4">I'm Hunter Harris</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder, designer, and problem-solver currently studying at Louisiana Tech University. I love combining practical ideas with smart technology — focused on data science and software engineering.</p>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">A builder, designer, and problem-solver currently studying at Louisiana Tech University. Passionate about using data science and engineering to solve real-world problems in meaningful, impactful ways.</p>
         </section>
 
-        <section id="projects" class="py-20">
+        <section id="technical-reports" class="py-20">
             <h3 class="text-4xl font-bold mb-12 text-center">Technical Reports</h3>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">A technical breakdown of the IoT-based water quality tester.</p>
+                    <p class="mb-4">Detailed technical documentation for my IoT water quality project.</p>
                     <a href="water-tester-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">Full documentation of the AI-based eye-tracking system.</p>
+                    <p class="mb-4">In-depth explanation of the AI-based eye tracking project.</p>
                     <a href="ai-eye-tracker-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl">
                     <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">A deep dive into the smart mirror project and its design.</p>
+                    <p class="mb-4">Comprehensive breakdown of the custom smart mirror build.</p>
                     <a href="magic-mirror-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
                 </div>
             </div>
         </section>
 
-        <section id="data-analysis" class="py-20 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">Data Science & Analytics</h3>
-            <p class="text-center text-lg mb-6">Exploring real-world data related to my projects.</p>
-            <canvas id="data-chart" width="400" height="200" class="mx-auto mb-12"></canvas>
+        <section id="data-projects" class="py-20 bg-gray-100 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Data Analysis Projects (Coming Soon)</h3>
+            <p class="text-center text-lg mb-6">I will showcase real data analysis here — focused on the industries or fields related to my projects. Stay tuned for collaborative work where I analyze impactful topics, whether it's trends in water safety, advancements in accessibility tech, or smart home technology adoption.</p>
+            <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
+                <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
+            </div>
         </section>
 
-        <section id="engineering" class="py-20 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">Software Engineering Showcase</h3>
-            <p class="text-center text-lg mb-6">Live interactive coding demo coming soon.</p>
+        <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
+            <h3 class="text-4xl font-bold mb-8 text-center">Software Engineering Interactive Demo</h3>
+            <p class="text-center text-lg mb-6">A coding demo will live here to show practical software engineering skills.</p>
             <div class="text-center mt-8">
                 <a href="live-demo.html" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">Launch Interactive Demo</a>
             </div>
@@ -73,33 +74,11 @@
     </main>
 
     <footer class="text-center p-6 mt-10 bg-white shadow-inner">
-        <p>&copy; 2025 Hunter Harris — Built with curiosity and craftsmanship.</p>
+        <p>&copy; 2025 Hunter Harris — Built with curiosity, passion, and precision.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById('data-chart').getContext('2d');
-        const chart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['City A', 'City B', 'City C', 'City D'],
-                datasets: [{
-                    label: 'Water Contamination Levels',
-                    data: [45, 78, 55, 90],
-                    borderColor: '#3b82f6',
-                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                    borderWidth: 2,
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: { beginAtZero: true }
-                }
-            }
-        });
-
         ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
     </script>
 </body>
