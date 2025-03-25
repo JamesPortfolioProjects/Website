@@ -1,3 +1,11 @@
-title: "My Portfolio"
+title: "Hunter Harris Portfolio"
 description: "A showcase of my skills, projects, and professional experiences"
 theme: minima
+url: "https://JamesPortfolioProjects.github.io" # Replace with your GitHub username.
+baseurl: "" # The baseurl setting is used when working locally.
+author:
+  name: "Hunter Harris"
+  email: "importantemailsforjames@gmail.com"
+social:
+  github: "https://github.com/JamesPortfolioProjects"
+  linkedin: "https://www.linkedin.com/in/hunter-harris-33237a293/"
