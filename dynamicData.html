@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for AJAX -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Data Dashboard</h1>
+        <div class="dashboard">
+            <canvas id="myChart"></canvas> <!-- Chart.js canvas -->
+        </div>
+        <div class="controls">
+            <label for="dataSelector">Choose a dataset:</label>
+            <select id="dataSelector">
+                <option value="weather">Weather Data</option>
+                <option value="stocks">Stock Data</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
