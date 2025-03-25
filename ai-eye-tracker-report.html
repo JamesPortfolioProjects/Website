@@ -1,1 +1,67 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>AI Eye Tracker - Technical Report</title></head><body><h1>AI Eye Tracker - Full Technical Report</h1><p>Comprehensive technical details of the AI eye tracker build process and algorithms.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Eye Tracker - Full Technical Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans px-6 py-10">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">AI Eye Tracker — Full Technical Report</h1>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">1. Introduction</h2>
+        <p class="mb-4">The AI Eye Tracker was designed as an accessibility tool that allows users to control a mouse pointer using only their eye or face movements. Built over a two-month period for a class competition, this project focused on delivering a functional prototype to assist individuals with mobility impairments. Despite time and resource constraints, the system combined computer vision, custom hardware, and socket-based networking to deliver a polished result.</p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">2. Objectives</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Develop a vision-based mouse control system using facial tracking.</li>
+            <li>Integrate velocity-smoothing algorithms for realistic cursor motion.</li>
+            <li>Create a custom Paint Canvas application for demonstration.</li>
+            <li>Enable cross-device communication via socket-based networking.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">3. Design & Planning</h2>
+        <p class="mb-4">The team chose OpenCV (cv2) for real-time face and eye tracking after other libraries proved too unreliable. While dlib offered higher accuracy, it was not chosen due to processing overhead and the project’s time frame. Key hardware and software components included:</p>
+        <ul class="list-disc pl-6 mb-4">
+            <li>A standard USB webcam for input feed.</li>
+            <li>A Raspberry Pi connected to a custom GPIO foot pedal for triggering mouse clicks.</li>
+            <li>Python-based tracking algorithms with predictive smoothing.</li>
+            <li>Socket-based communication between Raspberry Pi and PC.</li>
+            <li>A custom-built drawing canvas to showcase capabilities.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">4. Technical Implementation</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li><strong>Face & Eye Tracking:</strong> Haar cascade-based detection using OpenCV.</li>
+            <li><strong>Velocity Smoothing:</strong> Applied predictive smoothing formulas to reduce jitter in cursor movement.</li>
+            <li><strong>Mouse Mapping:</strong> Translated face coordinates into screen coordinates, scaled to resolution.</li>
+            <li><strong>Socket Communication:</strong> Used Python’s socket library to receive foot pedal input from Raspberry Pi in real-time.</li>
+            <li><strong>Custom Canvas:</strong> Developed in Python to allow users to draw with eye movements and trigger actions via foot pedal.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">5. Challenges Faced</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li><strong>Processing Bottlenecks:</strong> Python’s single-threaded environment led to frame delay issues.</li>
+            <li><strong>Detection Jitter:</strong> Smoothed out with velocity-based filtering.</li>
+            <li><strong>Network Reliability:</strong> Ensuring stable socket communication without packet loss.</li>
+            <li><strong>Hardware Constraints:</strong> Limited by budget and available computing power.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">6. Testing & Validation</h2>
+        <p class="mb-4">The prototype was showcased on large screens, allowing users to control the mouse via head movement and click using the foot pedal. Children and adults tested the system, successfully drawing and navigating without external input devices.</p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">7. Future Improvements</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Port code to multi-threaded languages (C++/Java) for enhanced performance.</li>
+            <li>Implement gaze-based fine-tuning for more precise cursor tracking.</li>
+            <li>Use wireless communication protocols in place of socket-based networking.</li>
+            <li>Add on-screen calibration tools and user profiles.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">8. Personal Reflection</h2>
+        <p>Bridging vision processing, hardware design, and networking made this project one of the most challenging and rewarding of my undergraduate work. While it didn’t win the competition, it received positive feedback and showed what’s possible with innovative problem-solving and teamwork.</p>
+    </div>
+</body>
+</html>
+
