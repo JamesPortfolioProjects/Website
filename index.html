@@ -47,14 +47,49 @@
             </div>
         </section>
 
-        <section id="data-projects" class="py-20 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center">Data Analysis Projects (Coming Soon)</h3>
-            <p class="text-center text-lg mb-6">I will showcase real data analysis here — focused on the industries or fields related to my projects. Stay tuned for collaborative work where I analyze impactful topics, whether it's trends in water safety, advancements in accessibility tech, or smart home technology adoption.</p>
-            <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-                <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
-            </div>
-        </section>
+        <!-- Data Analysis Projects Section -->
+<section id="data-projects" class="py-20 bg-gray-100 rounded-xl">
+    <h3 class="text-4xl font-bold mb-8 text-center">Data Analysis Projects</h3>
+    <p class="text-center text-lg mb-6">Interactive data visualization showcasing trends related to my past projects.</p>
+    
+    <!-- Chart Container -->
+    <div class="flex justify-center mb-8">
+        <canvas id="dataChart" width="400" height="200"></canvas>
+    </div>
 
+    <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
+        <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
+    </div>
+</section>
+
+<script>
+    // Data for the chart
+    const data = {
+        labels: ['Water Tester', 'AI Eye Tracker', 'Magic Mirror'],
+        datasets: [{
+            label: 'Hours of Development',
+            data: [120, 150, 180],  // Sample data for development hours
+            backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
+            borderWidth: 1
+        }]
+    };
+
+    // Create the chart
+    const ctx = document.getElementById('dataChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar', // Bar chart type
+        data: data,
+        options: {
+            responsive: true,
+            scales: {
+                y: { 
+                    beginAtZero: true 
+                }
+            }
+        }
+    });
+</script>
+        
         <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
             <h3 class="text-4xl font-bold mb-8 text-center">Software Engineering Interactive Demo</h3>
             <p class="text-center text-lg mb-6">Here you can interact with live code to see how software engineering concepts come to life. Try out different algorithms or challenges!</p>
