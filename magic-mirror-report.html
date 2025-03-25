@@ -1,1 +1,59 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Magic Mirror - Technical Report</title></head><body><h1>Magic Mirror - Full Technical Report</h1><p>Detailed technical information and challenges for the Magic Mirror project.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Mirror - Full Technical Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans px-6 py-10">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">Magic Mirror — Full Technical Report</h1>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">1. Introduction</h2>
+        <p class="mb-4">The Magic Mirror project was a self-driven endeavor to create an affordable, smart mirror that delivers interactive data, weather, time, and entertainment content. Designed as a personalized gift, it combines hardware engineering, custom software, and user-centric design to solve everyday usability challenges.</p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">2. Objectives</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Create a cost-effective alternative to expensive commercial magic mirrors.</li>
+            <li>Integrate smart customization features controllable from an iPhone app.</li>
+            <li>Enable seamless switching between mirror mode and entertainment displays.</li>
+            <li>Host the interface securely via self-hosted servers.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">3. Design & Planning</h2>
+        <p class="mb-4">The project utilized a Raspberry Pi as the core processor, connected to a monitor mounted behind a two-way acrylic mirror. The frame and mounting structure were hand-built to fit both aesthetic and practical needs. Software planning included heavy customization using MagicMirror² libraries alongside self-coded modules for dynamic controls.</p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">4. Technical Implementation</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li><strong>Hardware:</strong> Raspberry Pi 4B, 24” monitor, custom wood frame, acrylic two-way mirror with reflective film.</li>
+            <li><strong>Software:</strong> Customized MagicMirror² base with tailored widgets and modules coded from scratch.</li>
+            <li><strong>iPhone App:</strong> Flutter-based mobile app for real-time customization, brightness control, and quick app launches.</li>
+            <li><strong>Shortcuts:</strong> Hardware button and app-based shortcuts for one-click access to Netflix, YouTube, and news feeds.</li>
+            <li><strong>Networking:</strong> Securely self-hosted with IP masking to prevent unauthorized access.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">5. Challenges Faced</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Achieving smooth integration between Raspberry Pi display output and responsive mirror brightness levels.</li>
+            <li>Designing the housing to accommodate electronics, airflow, and cable management without compromising aesthetics.</li>
+            <li>Developing robust communication protocols between the Flutter app and the Magic Mirror server.</li>
+            <li>Handling latency and connectivity issues during app-to-mirror command execution.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">6. Testing & Validation</h2>
+        <p class="mb-4">Extensive testing was performed for both hardware durability and software responsiveness. The mirror performed well in real-world scenarios, allowing app-based controls for switching modules and triggering entertainment modes in under two seconds.</p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">7. Future Improvements</h2>
+        <ul class="list-disc pl-6 mb-4">
+            <li>Add voice-controlled functionalities using Google Assistant or Alexa integrations.</li>
+            <li>Upgrade to capacitive touch controls beneath the acrylic surface.</li>
+            <li>Incorporate advanced user profiles and scheduling features.</li>
+            <li>Enhance UI design and add more visualization modules for data display.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-3">8. Personal Reflection</h2>
+        <p>This project combined my passion for hardware tinkering, software development, and practical problem-solving. Building something both functional and personal for someone I care about was deeply rewarding. I plan to continue refining the system and adding smarter features as my technical skills evolve.</p>
+    </div>
+</body>
+</html>
