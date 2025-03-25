@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Demo</title>
+    <style>
+        /* Add custom CSS to style the demo */
+        body { font-family: Arial, sans-serif; }
+        .array { display: flex; justify-content: center; }
+        .bar { width: 20px; margin: 0 2px; background-color: teal; }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Interactive Sorting Algorithm Demo</h1>
+    <p>Click the button to see the sorting animation.</p>
+    <button onclick="startSorting()">Start Sorting</button>
+
+    <div class="array" id="array"></div>
+
+    <script>
+        let arr = [5, 3, 8, 4, 2];
+        let bars = [];
+
+        function drawArray() {
+            const container = document.getElementById("array");
+            container.innerHTML = "";
+            arr.forEach(value => {
+                const bar = document.createElement("div");
+                bar.className = "bar";
+                bar.style.height = `${value * 30}px`;
+                container.appendChild(bar);
+                bars.push(bar);
+            });
+        }
+
+        async function bubbleSort() {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        // Swap
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                        drawArray();
+                        await new Promise(resolve => setTimeout(resolve, 500)); // Animation delay
+                    }
+                }
+            }
+        }
+
+        function startSorting() {
+            bars = [];
+            drawArray();
+            bubbleSort();
+        }
+
+        drawArray();
+    </script>
+</body>
+</html>
