@@ -3,57 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Algorithm Demo</title>
-    <style>
-        /* Add custom CSS to style the demo */
-        body { font-family: Arial, sans-serif; }
-        .array { display: flex; justify-content: center; }
-        .bar { width: 20px; margin: 0 2px; background-color: teal; }
-    </style>
+    <title>Software Engineering Demo - Sorting Algorithm</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1 class="text-center">Interactive Sorting Algorithm Demo</h1>
-    <p>Click the button to see the sorting animation.</p>
-    <button onclick="startSorting()">Start Sorting</button>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-    <div class="array" id="array"></div>
+    <section class="py-20 bg-gray-100 rounded-xl">
+        <h3 class="text-4xl font-bold mb-8 text-center">Software Engineering Interactive Demo</h3>
+        <p class="text-center text-lg mb-6">Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!</p>
+
+        <div class="flex justify-center mb-8">
+            <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
+            <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">Run Demo</button>
+        </div>
+
+        <!-- Output Section -->
+        <div id="demoOutput" class="hidden text-center">
+            <p class="text-xl mb-4">Sorted Numbers:</p>
+            <div id="outputChartContainer" class="mb-8">
+                <canvas id="outputChart" width="400" height="200"></canvas>
+            </div>
+            <p class="text-lg">Click 'Run Demo' again to try a new set of numbers!</p>
+        </div>
+    </section>
 
     <script>
-        let arr = [5, 3, 8, 4, 2];
-        let bars = [];
+        document.getElementById("runDemoButton").addEventListener("click", function() {
+            const input = document.getElementById("inputNumbers").value;
+            const numbers = input.split(",").map(num => parseInt(num.trim(), 10)).filter(num => !isNaN(num));
 
-        function drawArray() {
-            const container = document.getElementById("array");
-            container.innerHTML = "";
-            arr.forEach(value => {
-                const bar = document.createElement("div");
-                bar.className = "bar";
-                bar.style.height = `${value * 30}px`;
-                container.appendChild(bar);
-                bars.push(bar);
-            });
-        }
+            if (numbers.length === 0) {
+                alert("Please enter some valid numbers.");
+                return;
+            }
 
-        async function bubbleSort() {
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr.length - i - 1; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        // Swap
-                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-                        drawArray();
-                        await new Promise(resolve => setTimeout(resolve, 500)); // Animation delay
+            // Sort the numbers
+            const sortedNumbers = numbers.sort((a, b) => a - b);
+
+            // Display the sorted numbers in a chart
+            const ctx = document.getElementById("outputChart").getContext("2d");
+            const demoChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sortedNumbers.map((_, index) => `Index ${index + 1}`),
+                    datasets: [{
+                        label: 'Sorted Numbers',
+                        data: sortedNumbers,
+                        backgroundColor: '#4caf50',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: { beginAtZero: true }
                     }
                 }
-            }
-        }
+            });
 
-        function startSorting() {
-            bars = [];
-            drawArray();
-            bubbleSort();
-        }
+            // Show the output container and the chart
+            document.getElementById("demoOutput").classList.remove("hidden");
 
-        drawArray();
+            // Clear the input field after running the demo
+            document.getElementById("inputNumbers").value = '';
+        });
     </script>
+
 </body>
 </html>
