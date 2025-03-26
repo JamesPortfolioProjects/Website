@@ -58,111 +58,116 @@
 
         <!-- Data Analysis Projects Section -->
         <section id="data-projects" class="py-20 bg-gray-100 rounded-xl">
-    <h3 class="text-4xl font-bold mb-8 text-center">Data Analysis Demo</h3>
-    <p class="text-center text-lg mb-6">Interactive data visualization showcasing trends related to my past projects.</p>
+            <h3 class="text-4xl font-bold mb-8 text-center">Data Analysis Demo</h3>
+            <p class="text-center text-lg mb-6">Interactive data visualization showcasing trends related to my past projects.</p>
 
-    <!-- Chart Container -->
-    <div class="flex justify-center mb-8">
-        <canvas id="dataChart" width="400" height="200"></canvas>
-    </div>
+            <!-- Chart Container -->
+            <div class="flex justify-center mb-8">
+                <canvas id="dataChart" width="400" height="200"></canvas>
+            </div>
 
-    <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-        <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
-    </div>
-</section>
+            <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
+                <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
+            </div>
+        </section>
 
-<script>
-    // Sample data for the chart
-    const data = {
-        labels: ['Water Tester', 'AI Eye Tracker', 'Magic Mirror'],
-        datasets: [{
-            label: 'Impact Score',
-            data: [90, 75, 85],  // Sample impact scores for each project
-            backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
-            borderWidth: 1
-        }]
-    };
+        <script>
+            // Sample data for the chart
+            const data = {
+                labels: ['Water Tester', 'AI Eye Tracker', 'Magic Mirror'],
+                datasets: [{
+                    label: 'Impact Score',
+                    data: [90, 75, 85],  // Sample impact scores for each project
+                    backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
+                    borderWidth: 1
+                }]
+            };
 
-    // Create the chart
-    const ctx = document.getElementById('dataChart').getContext('2d');
-    const dataChart = new Chart(ctx, {
-        type: 'bar', // Bar chart type
-        data: data,
-        options: {
-            responsive: true,
-            scales: {
-                y: { 
-                    beginAtZero: true 
+            // Create the chart
+            const ctx = document.getElementById('dataChart').getContext('2d');
+            const dataChart = new Chart(ctx, {
+                type: 'bar', // Bar chart type
+                data: data,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: { 
+                            beginAtZero: true 
+                        }
+                    }
                 }
-            }
-        }
-    });
-</script>
-
+            });
+        </script>
 
         <!-- Software Engineering Interactive Demo Section -->
         <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
-    <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
-    <p class="text-center text-lg mb-6">Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!</p>
+            <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
+            <p class="text-center text-lg mb-6">Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!</p>
 
-    <!-- User Input for Sorting -->
-    <div class="flex justify-center mb-8">
-        <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
-        <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">Run Demo</button>
-    </div>
+            <!-- User Input for Sorting -->
+            <div class="flex justify-center mb-8">
+                <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
+                <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">Run Demo</button>
+            </div>
 
-    <!-- Output Section -->
-    <div id="demoOutput" class="hidden text-center">
-        <p class="text-xl mb-4">Sorted Numbers:</p>
-        <div id="outputChartContainer" class="mb-8">
-            <canvas id="outputChart" width="400" height="200"></canvas>
-        </div>
-        <p class="text-lg">Click 'Run Demo' again to try a new set of numbers!</p>
-    </div>
-</section>
+            <!-- Output Section -->
+            <div id="demoOutput" class="hidden text-center">
+                <p class="text-xl mb-4">Sorted Numbers:</p>
+                <div id="outputChartContainer" class="mb-8">
+                    <canvas id="outputChart" width="400" height="200"></canvas>
+                </div>
+                <p class="text-lg">Click 'Run Demo' again to try a new set of numbers!</p>
+            </div>
+        </section>
 
-<script>
-    document.getElementById("runDemoButton").addEventListener("click", function() {
-        const input = document.getElementById("inputNumbers").value;
-        const numbers = input.split(",").map(num => parseInt(num.trim(), 10)).filter(num => !isNaN(num));
+        <script>
+            document.getElementById("runDemoButton").addEventListener("click", function() {
+                const input = document.getElementById("inputNumbers").value;
+                const numbers = input.split(",").map(num => parseInt(num.trim(), 10)).filter(num => !isNaN(num));
 
-        if (numbers.length === 0) {
-            alert("Please enter some valid numbers.");
-            return;
-        }
-
-        // Sort the numbers
-        const sortedNumbers = numbers.sort((a, b) => a - b);
-
-        // Display the sorted numbers in a chart
-        const ctx = document.getElementById("outputChart").getContext("2d");
-        const demoChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: sortedNumbers.map((_, index) => `Index ${index + 1}`),
-                datasets: [{
-                    label: 'Sorted Numbers',
-                    data: sortedNumbers,
-                    backgroundColor: '#4caf50',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: { beginAtZero: true }
+                if (numbers.length === 0) {
+                    alert("Please enter some valid numbers.");
+                    return;
                 }
-            }
-        });
 
-        // Show the output container and the chart
-        document.getElementById("demoOutput").classList.remove("hidden");
+                // Sort the numbers
+                const sortedNumbers = numbers.sort((a, b) => a - b);
 
-        // Clear the input field after running the demo
-        document.getElementById("inputNumbers").value = '';
-    });
-</script>
+                // Display the sorted numbers in a chart
+                const ctx = document.getElementById("outputChart").getContext("2d");
+                const demoChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: sortedNumbers.map((_, index) => `Index ${index + 1}`),
+                        datasets: [{
+                            label: 'Sorted Numbers',
+                            data: sortedNumbers,
+                            backgroundColor: '#4caf50',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
 
+                // Show the output container and the chart
+                document.getElementById("demoOutput").classList.remove("hidden");
+
+                // Clear the input field after running the demo
+                document.getElementById("inputNumbers").value = '';
+            });
+        </script>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="text-center p-6 mt-10 bg-white shadow-inner">
+        <p>&copy; 2025 Hunter Harris — Built with curiosity, passion, and coffee ☕</p>
+    </footer>
 
 </body>
 
