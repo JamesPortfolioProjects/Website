@@ -73,71 +73,64 @@
 
         <!-- Software Engineering Interactive Demo Section -->
         <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
-            <p class="text-center text-lg mb-6">Try out this simple algorithm demo to see how logic is applied to real-world challenges.</p>
+    <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
+    <p class="text-center text-lg mb-6">Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!</p>
 
-            <div class="flex justify-center mb-8">
-                <button id="demoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">Run Demo</button>
-            </div>
+    <!-- User Input for Sorting -->
+    <div class="flex justify-center mb-8">
+        <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
+        <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">Run Demo</button>
+    </div>
 
-            <!-- Demo Output -->
-            <div id="demoOutput" class="bg-white p-6 rounded-xl shadow-lg text-center text-xl hidden">
-                <p id="outputText">This is a simple interactive demo. More complex functionality will be added soon!</p>
-            </div>
-        </section>
+    <!-- Output Section -->
+    <div id="demoOutput" class="hidden text-center">
+        <p class="text-xl mb-4">Sorted Numbers:</p>
+        <div id="outputChartContainer" class="mb-8">
+            <canvas id="outputChart" width="400" height="200"></canvas>
+        </div>
+        <p class="text-lg">Click 'Run Demo' again to try a new set of numbers!</p>
+    </div>
+</section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center text-gradient">Let's Connect</h3>
-            <div class="text-center space-x-6">
-                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
-                <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
-                <a href="https://github.com/JamesPortfolioProjects" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">GitHub</a>
-            </div>
-        </section>
-    </main>
+<script>
+    document.getElementById("runDemoButton").addEventListener("click", function() {
+        const input = document.getElementById("inputNumbers").value;
+        const numbers = input.split(",").map(num => parseInt(num.trim(), 10)).filter(num => !isNaN(num));
 
-    <footer class="text-center p-6 mt-10 bg-white shadow-inner">
-        <p>&copy; 2025 Hunter Harris — Built with curiosity, passion, and coffee ☕</p>
-    </footer>
+        if (numbers.length === 0) {
+            alert("Please enter some valid numbers.");
+            return;
+        }
 
-    <script>
-        // Data for the chart
-        const data = {
-            labels: ['Water Tester', 'AI Eye Tracker', 'Magic Mirror'],
-            datasets: [{
-                label: 'Hours of Development',
-                data: [120, 150, 180],
-                backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
-                borderWidth: 1
-            }]
-        };
+        // Sort the numbers
+        const sortedNumbers = numbers.sort((a, b) => a - b);
 
-        // Create the chart
-        const ctx = document.getElementById('dataChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar', // Bar chart type
-            data: data,
+        // Display the sorted numbers in a chart
+        const ctx = document.getElementById("outputChart").getContext("2d");
+        const demoChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: sortedNumbers.map((_, index) => `Index ${index + 1}`),
+                datasets: [{
+                    label: 'Sorted Numbers',
+                    data: sortedNumbers,
+                    backgroundColor: '#4caf50',
+                    borderWidth: 1
+                }]
+            },
             options: {
                 responsive: true,
                 scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+                    y: { beginAtZero: true }
                 }
             }
         });
 
-        // Software Engineering Demo Functionality
-        document.getElementById("demoButton").addEventListener("click", function() {
-            const demoOutput = document.getElementById("demoOutput");
-            demoOutput.classList.remove("hidden");
-            document.getElementById("outputText").textContent = "The algorithm ran successfully! Stay tuned for more complex demos!";
-        });
+        // Show the output container and the chart
+        document.getElementById("demoOutput").classList.remove("hidden");
+    });
+</script>
 
-        // Scroll Reveal Animation
-        ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
-    </script>
 </body>
 
 </html>
