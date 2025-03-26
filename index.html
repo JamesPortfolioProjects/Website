@@ -71,34 +71,6 @@
             </div>
         </section>
 
-        <script>
-            // Sample data for the chart
-            const data = {
-                labels: ['Water Tester', 'AI Eye Tracker', 'Magic Mirror'],
-                datasets: [{
-                    label: 'Impact Score',
-                    data: [90, 75, 85],  // Sample impact scores for each project
-                    backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
-                    borderWidth: 1
-                }]
-            };
-
-            // Create the chart
-            const ctx = document.getElementById('dataChart').getContext('2d');
-            const dataChart = new Chart(ctx, {
-                type: 'bar', // Bar chart type
-                data: data,
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: { 
-                            beginAtZero: true 
-                        }
-                    }
-                }
-            });
-        </script>
-
         <!-- Software Engineering Interactive Demo Section -->
         <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
             <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
@@ -120,55 +92,24 @@
             </div>
         </section>
 
-        <script>
-            document.getElementById("runDemoButton").addEventListener("click", function() {
-                const input = document.getElementById("inputNumbers").value;
-                const numbers = input.split(",").map(num => parseInt(num.trim(), 10)).filter(num => !isNaN(num));
-
-                if (numbers.length === 0) {
-                    alert("Please enter some valid numbers.");
-                    return;
-                }
-
-                // Sort the numbers
-                const sortedNumbers = numbers.sort((a, b) => a - b);
-
-                // Display the sorted numbers in a chart
-                const ctx = document.getElementById("outputChart").getContext("2d");
-                const demoChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: sortedNumbers.map((_, index) => `Index ${index + 1}`),
-                        datasets: [{
-                            label: 'Sorted Numbers',
-                            data: sortedNumbers,
-                            backgroundColor: '#4caf50',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: { beginAtZero: true }
-                        }
-                    }
-                });
-
-                // Show the output container and the chart
-                document.getElementById("demoOutput").classList.remove("hidden");
-
-                // Clear the input field after running the demo
-                document.getElementById("inputNumbers").value = '';
-            });
-        </script>
-
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h3 class="text-4xl font-bold mb-6 text-center">Let's Connect</h3>
+            <div class="text-center space-x-6">
+                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
+                <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
+                <a href="https://github.com/JamesPortfolioProjects" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">GitHub</a>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer Section -->
     <footer class="text-center p-6 mt-10 bg-white shadow-inner">
         <p>&copy; 2025 Hunter Harris — Built with curiosity, passion, and coffee ☕</p>
     </footer>
 
+    <script>
+        ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
+    </script>
 </body>
 
 </html>
