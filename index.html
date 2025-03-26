@@ -58,18 +58,47 @@
 
         <!-- Data Analysis Projects Section -->
         <section id="data-projects" class="py-20 bg-gray-100 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Data Analysis Projects</h3>
-            <p class="text-center text-lg mb-6">Interactive data visualizations showcasing trends related to my past projects.</p>
-            
-            <!-- Chart Container -->
-            <div class="flex justify-center mb-8">
-                <canvas id="dataChart" width="400" height="200"></canvas>
-            </div>
+    <h3 class="text-4xl font-bold mb-8 text-center">Data Analysis Demo</h3>
+    <p class="text-center text-lg mb-6">Interactive data visualization showcasing trends related to my past projects.</p>
 
-            <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
-                <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
-            </div>
-        </section>
+    <!-- Chart Container -->
+    <div class="flex justify-center mb-8">
+        <canvas id="dataChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="border-4 border-dashed border-gray-300 rounded-xl p-12 text-center text-gray-400">
+        <p>Placeholder for future data science and analytics visualizations with actionable insights.</p>
+    </div>
+</section>
+
+<script>
+    // Sample data for the chart
+    const data = {
+        labels: ['Water Tester', 'AI Eye Tracker', 'Magic Mirror'],
+        datasets: [{
+            label: 'Impact Score',
+            data: [90, 75, 85],  // Sample impact scores for each project
+            backgroundColor: ['#3b82f6', '#8b5cf6', '#10b981'],
+            borderWidth: 1
+        }]
+    };
+
+    // Create the chart
+    const ctx = document.getElementById('dataChart').getContext('2d');
+    const dataChart = new Chart(ctx, {
+        type: 'bar', // Bar chart type
+        data: data,
+        options: {
+            responsive: true,
+            scales: {
+                y: { 
+                    beginAtZero: true 
+                }
+            }
+        }
+    });
+</script>
+
 
         <!-- Software Engineering Interactive Demo Section -->
         <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
