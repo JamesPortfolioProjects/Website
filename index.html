@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hunter Harris - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -20,11 +20,11 @@
     });
   </script>
   <style>
-    /* Increase the base font size inside Mermaid diagrams */
+    /* Increase base font size for Mermaid diagrams */
     .mermaid {
       font-size: 1.1rem;
     }
-    /* Scale SVG for a bigger flowchart */
+    /* Scale the entire SVG for a bigger, clearer flowchart */
     .mermaid svg {
       transform: scale(1.05);
       transform-origin: top left;
@@ -56,7 +56,8 @@
     <section id="about" class="text-center py-20">
       <h2 class="text-5xl font-bold mb-4 text-gradient">About Me</h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto">
-        A military veteran, builder, designer, and problem-solver currently studying at Louisiana Tech University. Passionate about using data science and engineering to solve real-world problems in meaningful, impactful ways.
+        A military veteran, builder, designer, and problem-solver currently studying at Louisiana Tech University.
+        Passionate about using data science and engineering to solve real-world problems in meaningful, impactful ways.
       </p>
     </section>
 
@@ -116,7 +117,9 @@
           <li>Devising a clear taxonomy for categorizing disclosures.</li>
           <li>Ensuring data quality and consistency across forms.</li>
           <li>Inaccurate data collection from varied prompts—differences in synonyms and phrasing lead to unreliable extraction.</li>
-          <li>AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. I'm evaluating whether to use a hybrid or a traditional XBRL inline method.</li>
+          <li>
+            AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. I'm evaluating whether to use a hybrid approach or a traditional XBRL inline method.
+          </li>
           <li>Limited resources as a solo developer make refining the pipeline challenging.</li>
         </ul>
         <h4 class="text-xl font-semibold mb-2">Possible Solutions &amp; Future Directions</h4>
@@ -128,7 +131,7 @@
         </ul>
         <h4 class="text-xl font-semibold mb-2">Why This Matters</h4>
         <p class="mb-4">
-          This project addresses complex data engineering challenges and applies AI to financial data analysis, helping determine best practices for small-scale teams.
+          This project addresses complex data engineering challenges and applies AI to financial data analysis, helping to determine best practices for small-scale teams.
         </p>
       </div>
 
@@ -146,22 +149,22 @@
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
         <p class="mb-4">
-          This diagram shows the process of data collection, parsing, cleaning, analysis, and visualization in the EDGAR project.
+          This diagram shows the process from data collection through cleaning, analysis, and visualization.
         </p>
         <div class="mermaid">
-%%{ init: { "theme": "default", "themeVariables": { "fontSize": "22px", "nodePadding": "20", "nodeMargin": "20" } } }%%
+%%{ init: { "theme": "default", "themeVariables": { "fontSize": "22px", "nodePadding": "15", "nodeMargin": "15" } } }%%
 graph TD
-  subgraph Top_Row
-    A["Start: Trigger Data Collection"]
-    B["Scrape EDGAR Filings using requests &amp; BeautifulSoup"]
-    C["Parse Filings into Structured Data"]
-    D["Clean & Standardize Data"]
+  subgraph [ ]
+    A[Trigger Data Collection]
+    B[Scrape EDGAR Filings using requests &amp; BeautifulSoup]
+    C[Parse Filings into Structured Data]
+    D[Clean & Standardize Data]
   end
-  subgraph Bottom_Row
-    E["Apply NLP Techniques (spaCy, NLTK)"]
-    F["Analyze Data (AI vs. GAAG/XBRL)"]
-    G["Generate Visualizations"]
-    H["Display Insights on Dashboard"]
+  subgraph [ ]
+    E[Apply NLP Techniques (spaCy, NLTK)]
+    F[Analyze Data (AI vs. GAAG/XBRL)]
+    G[Generate Visualizations]
+    H[Display Insights on Dashboard]
   end
   D --> E
         </div>
