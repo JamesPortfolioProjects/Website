@@ -153,14 +153,24 @@
         </p>
         <div class="mermaid">
 graph LR
-    A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings\n(using requests &amp; BeautifulSoup)"]
-    B --> C["Parse Filings into Structured Data"]
-    C --> D["Clean &amp; Standardize Data"]
-    D --> E["Apply NLP Techniques\n(spaCy, NLTK)"]
-    E --> F["Analyze Data\n(AI vs. GAAG/XBRL)"]
-    F --> G["Generate Visualizations"]
-    G --> H["Display Insights on Dashboard"]
-        </div>
+  A[Start: Trigger Data Collection]
+  B[Scrape EDGAR Filings\n(using requests &amp; BeautifulSoup)]
+  C[Parse Filings into Structured Data]
+  D[Clean &amp; Standardize Data]
+  E[Apply NLP Techniques\n(spaCy, NLTK)]
+  F[Analyze Data\n(AI vs. GAAG/XBRL)]
+  G[Generate Visualizations]
+  H[Display Insights on Dashboard]
+
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G --> H
+</div>
+
       </div>
 
       <!-- Button Linking to the EDGAR Repo -->
