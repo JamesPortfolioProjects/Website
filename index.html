@@ -10,8 +10,29 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- Custom styles to enlarge the Mermaid flowchart -->
+  <style>
+    /* Increase the base font size inside Mermaid diagrams */
+    .mermaid {
+      font-size: 1.1rem; /* Adjust as needed (1.1rem ~ 17.6px if root is 16px) */
+    }
+    /* Optionally scale the entire SVG for a bigger flowchart */
+    .mermaid svg {
+      transform: scale(1.05);
+      transform-origin: top left; /* Ensures scaling from the top-left corner */
+    }
+  </style>
+
   <script>
-    mermaid.initialize({ startOnLoad: true });
+    // Configure Mermaid to use a larger default font
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      themeVariables: {
+        fontSize: '18px' // Adjust this as you like (e.g., '16px', '20px', etc.)
+      }
+    });
   </script>
 </head>
 
@@ -124,7 +145,6 @@
         <p class="mb-4">
           The diagram below visualizes how the EDGAR code works, from fetching data to displaying insights—much like how teachers illustrate algorithms such as bubble sort.
         </p>
-        <!-- Fix: Use \n for line breaks and escape & as &amp; -->
         <div class="mermaid">
 graph LR
     A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings\n(using requests &amp; BeautifulSoup)"]
