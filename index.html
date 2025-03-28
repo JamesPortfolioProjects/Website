@@ -153,6 +153,7 @@
         </p>
         <div class="mermaid">
 graph LR
+  %% Define each node on a separate line
   A[Start: Trigger Data Collection]
   B[Scrape EDGAR Filings\n(using requests &amp; BeautifulSoup)]
   C[Parse Filings into Structured Data]
@@ -162,6 +163,7 @@ graph LR
   G[Generate Visualizations]
   H[Display Insights on Dashboard]
 
+  %% Define the connections between nodes
   A --> B
   B --> C
   C --> D
@@ -170,6 +172,7 @@ graph LR
   F --> G
   G --> H
 </div>
+
 
       </div>
 
