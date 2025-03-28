@@ -12,7 +12,6 @@
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
-    /* Initialize Mermaid with smaller font and spacing */
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
@@ -26,18 +25,16 @@
       }
     });
   </script>
-
   <style>
-    /* Let the diagram scale naturally to fit container */
+    /* Ensure Mermaid diagrams fit the container naturally */
     .mermaid svg {
-      max-width: 100% !important; /* Ensures the diagram fits the container */
+      width: 100% !important;
       height: auto !important;
     }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
-
   <!-- Header Section -->
   <header class="bg-blue-600 text-white shadow-lg p-6">
     <div class="container mx-auto flex justify-between items-center">
@@ -55,7 +52,6 @@
 
   <!-- Main Content -->
   <main class="container mx-auto px-6 py-12">
-
     <!-- About Section -->
     <section id="about" class="text-center py-20">
       <h2 class="text-5xl font-bold mb-4 text-gradient">About Me</h2>
@@ -146,7 +142,7 @@
       </div>
 
       <!-- Code Workflow Diagram -->
-      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8" style="width: 400px; height: 200px; margin: 0 auto;">
         <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
         <p class="mb-4">
           This diagram shows the process from data collection through cleaning, analysis, and visualization.
@@ -272,7 +268,6 @@ graph TD
       }
     });
 
-    // Reveal sections on scroll
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
 </body>
