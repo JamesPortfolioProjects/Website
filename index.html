@@ -96,13 +96,48 @@
     </p>
   </div>
 
-  <!-- Demo or Preview Button (Optional) -->
+  <!-- Visualization Section -->
+  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
+    <h4 class="text-2xl font-semibold mb-4">Workflow Visualization</h4>
+    <canvas id="workflowChart" width="400" height="200"></canvas>
+  </div>
+
+  <!-- Button Linking to the EDGAR Repo -->
   <div class="text-center">
-    <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
-      View Demo / Preview
+    <a href="https://github.com/JamesPortfolioProjects/Current-Project-Data-Analytics-for-Stocks-" target="_blank"
+       class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
+      View EDGAR Repo on GitHub
     </a>
   </div>
 </section>
+
+<!-- Visualization Script -->
+<script>
+  const ctx = document.getElementById('workflowChart').getContext('2d');
+  const workflowChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Scraping', 'Parsing', 'Processing', 'Analysis', 'Visualization'],
+      datasets: [{
+        label: 'Progress (%)',
+        data: [80, 70, 50, 60, 40], // Update these values as your project progresses
+        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      indexAxis: 'y', // This makes the bar chart horizontal
+      scales: {
+        x: {
+          beginAtZero: true,
+          max: 100
+        }
+      }
+    }
+  });
+</script>
+
 
 
         <!-- Software Engineering Interactive Demo Section -->
