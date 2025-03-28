@@ -10,30 +10,26 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-
-  <!-- Custom styles to enlarge the Mermaid flowchart -->
-  <style>
-    /* Increase the base font size inside Mermaid diagrams */
-    .mermaid {
-      font-size: 1.1rem; /* Adjust as needed (1.1rem ~ 17.6px if root is 16px) */
-    }
-    /* Optionally scale the entire SVG for a bigger flowchart */
-    .mermaid svg {
-      transform: scale(1.05);
-      transform-origin: top left; /* Ensures scaling from the top-left corner */
-    }
-  </style>
-
   <script>
-    // Configure Mermaid to use a larger default font
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
       themeVariables: {
-        fontSize: '18px' // Adjust this as you like (e.g., '16px', '20px', etc.)
+        fontSize: '18px'
       }
     });
   </script>
+  <style>
+    /* Increase the base font size inside Mermaid diagrams */
+    .mermaid {
+      font-size: 1.1rem;
+    }
+    /* Optionally scale the entire SVG for a bigger flowchart */
+    .mermaid svg {
+      transform: scale(1.05);
+      transform-origin: top left;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -47,9 +43,8 @@
         <a href="#current-project" class="mx-3 hover:text-gray-300">EDGAR Project</a>
         <a href="#engineering" class="mx-3 hover:text-gray-300">Engineering Demo</a>
         <a href="#contact" class="mx-3 hover:text-gray-300">Contact</a>
-        <a href="resume.pdf" target="_blank" class="mx-3 hover:text-gray-300">Resume</a>
+        <a href="#resume" class="mx-3 hover:text-gray-300">Resume</a>
       </nav>
-
     </div>
   </header>
 
@@ -61,6 +56,15 @@
       <p class="text-xl mb-8 max-w-2xl mx-auto">
         A military veteran, builder, designer, and problem-solver currently studying at Louisiana Tech University. Passionate about using data science and engineering to solve real-world problems in meaningful, impactful ways.
       </p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 bg-white rounded-xl shadow-xl mx-auto max-w-2xl text-center">
+      <h2 class="text-4xl font-bold mb-4 text-blue-600">My Resume</h2>
+      <p class="text-lg mb-6">Discover my professional experience and skills.</p>
+      <a href="resume.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+        View My Resume
+      </a>
     </section>
 
     <!-- Projects Section -->
