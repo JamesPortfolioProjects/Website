@@ -85,9 +85,9 @@
           <li>Ensuring data quality and consistency across forms.</li>
           <li>Inaccurate data collection from varied prompts—differences in synonyms and phrasing lead to unreliable extraction.</li>
           <li>
-            AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. Uncertainty remains whether this approach, a hybrid, or a traditional XBRL inline method is best.
+            AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. I'm evaluating whether this, a hybrid approach, or a traditional XBRL inline method is best.
           </li>
-          <li>Limited resources as a solo developer, making it challenging to refine the pipeline as thoroughly as larger teams could.</li>
+          <li>Limited resources as a solo developer make it challenging to refine the pipeline as thoroughly as larger teams could.</li>
         </ul>
         <h4 class="text-xl font-semibold mb-2">Possible Solutions &amp; Future Directions</h4>
         <ul class="list-disc pl-6 mb-4">
@@ -106,7 +106,9 @@
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Technical Workflow Visualization</h4>
         <p class="mb-4">
-          The chart below illustrates the current pipeline from data scraping to visualization. Each stage highlights specific challenges that impact overall progress.
+          The chart below illustrates the current pipeline—from data scraping to visualization. The progress numbers reflect:
+          <strong>Scraping: 80%</strong>, <strong>Parsing: 75%</strong>, <strong>Processing: 60%</strong>, <strong>Analysis: 50%</strong>, and <strong>Visualization: 40%</strong>.
+          Tooltips provide additional context about the challenges at each stage.
         </p>
         <canvas id="workflowChart" width="400" height="200"></canvas>
       </div>
@@ -175,7 +177,7 @@
         labels: ['Scraping', 'Parsing', 'Processing', 'Analysis', 'Visualization'],
         datasets: [{
           label: 'Progress (%)',
-          data: [80, 70, 50, 60, 40], // Update these values as your project evolves
+          data: [80, 75, 60, 50, 40],
           backgroundColor: 'rgba(54, 162, 235, 0.6)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1
@@ -197,19 +199,19 @@
                 let challenge = '';
                 switch (stage) {
                   case 'Scraping':
-                    challenge = 'Inconsistent prompt responses';
+                    challenge = 'Inconsistent prompt responses & varied synonyms';
                     break;
                   case 'Parsing':
-                    challenge = 'Synonym variations causing errors';
+                    challenge = 'Edge cases in extraction routines';
                     break;
                   case 'Processing':
-                    challenge = 'AI model inaccuracies (e.g., Cohere)';
+                    challenge = 'Data cleaning requires further refinement';
                     break;
                   case 'Analysis':
-                    challenge = 'Comparing AI vs. GAAG/XBRL methods';
+                    challenge = 'Evaluating AI vs. traditional methods';
                     break;
                   case 'Visualization':
-                    challenge = 'Mapping technical progress clearly';
+                    challenge = 'Basic charts implemented, needs enhancement';
                     break;
                   default:
                     challenge = '';
