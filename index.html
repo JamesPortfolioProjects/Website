@@ -12,14 +12,14 @@
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
-    /* Initialize Mermaid with bigger font and node spacing */
+    /* Initialize Mermaid with a moderately large font and node spacing */
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
       themeVariables: {
-        fontSize: '24px',
-        nodePadding: '20',
-        nodeMargin: '20'
+        fontSize: '18px',
+        nodePadding: '15',
+        nodeMargin: '15'
       },
       flowchart: {
         useMaxWidth: true
@@ -110,8 +110,8 @@
         <h4 class="text-xl font-semibold mb-2">What I've Tried So Far</h4>
         <ul class="list-disc pl-6 mb-4">
           <li>Gathered a sample set of 10-K filings to familiarize myself with EDGAR’s structure.</li>
-          <li>Experimented with Python libraries (e.g., <code>requests</code>, <code>BeautifulSoup</code>) to scrape and parse forms.</li>
-          <li>Prototyped NLP techniques (e.g., <code>spaCy</code>, <code>NLTK</code>) for text analysis.</li>
+          <li>Experimented with Python libraries (<code>requests</code>, <code>BeautifulSoup</code>) to scrape and parse forms.</li>
+          <li>Prototyped NLP techniques (<code>spaCy</code>, <code>NLTK</code>) for text analysis.</li>
         </ul>
         <h4 class="text-xl font-semibold mb-2">Current Challenges</h4>
         <ul class="list-disc pl-6 mb-4">
@@ -152,7 +152,7 @@
           This diagram shows the process from data collection through cleaning, analysis, and visualization.
         </p>
         <div class="mermaid">
-%%{ init: { "theme": "default", "themeVariables": { "fontSize": "24px", "nodePadding": "20", "nodeMargin": "20" }, "flowchart": { "useMaxWidth": true } } }%%
+%%{ init: { "theme": "default", "themeVariables": { "fontSize": "18px", "nodePadding": "15", "nodeMargin": "15" }, "flowchart": { "useMaxWidth": true } } }%%
 graph TD
     A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings<br/>using requests &amp; BeautifulSoup"]
     B --> C["Parse Filings into<br/>Structured Data"]
@@ -272,9 +272,7 @@ graph TD
       }
     });
 
-    // Reveal sections on scroll
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
 </body>
-
 </html>
