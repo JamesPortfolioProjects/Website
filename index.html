@@ -12,14 +12,14 @@
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
-    /* Initialize Mermaid with a moderately large font and node spacing */
+    /* Initialize Mermaid with smaller font and spacing */
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
       themeVariables: {
-        fontSize: '18px',
-        nodePadding: '15',
-        nodeMargin: '15'
+        fontSize: '14px',
+        nodePadding: '10',
+        nodeMargin: '10'
       },
       flowchart: {
         useMaxWidth: true
@@ -28,7 +28,7 @@
   </script>
 
   <style>
-    /* Remove scaling transforms so text doesn't get cut off */
+    /* Let the diagram scale naturally to fit container */
     .mermaid svg {
       max-width: 100% !important; /* Ensures the diagram fits the container */
       height: auto !important;
@@ -152,7 +152,7 @@
           This diagram shows the process from data collection through cleaning, analysis, and visualization.
         </p>
         <div class="mermaid">
-%%{ init: { "theme": "default", "themeVariables": { "fontSize": "18px", "nodePadding": "15", "nodeMargin": "15" }, "flowchart": { "useMaxWidth": true } } }%%
+%%{ init: { "theme": "default", "themeVariables": { "fontSize": "14px", "nodePadding": "10", "nodeMargin": "10" }, "flowchart": { "useMaxWidth": true } } }%%
 graph TD
     A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings<br/>using requests &amp; BeautifulSoup"]
     B --> C["Parse Filings into<br/>Structured Data"]
@@ -272,6 +272,7 @@ graph TD
       }
     });
 
+    // Reveal sections on scroll
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
 </body>
