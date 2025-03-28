@@ -15,17 +15,21 @@
       startOnLoad: true,
       theme: 'default',
       themeVariables: {
-        fontSize: '20px'
+        fontSize: '22px'
       }
     });
   </script>
   <style>
+    /* Increase the base font size inside Mermaid diagrams */
     .mermaid {
       font-size: 1.1rem;
     }
+    /* Scale SVG for a bigger flowchart */
     .mermaid svg {
       transform: scale(1.05);
       transform-origin: top left;
+      width: 100% !important;
+      height: auto !important;
     }
   </style>
 </head>
@@ -94,11 +98,11 @@
       <p class="text-center text-lg mb-6 max-w-2xl mx-auto">
         An ongoing project where I analyze SEC EDGAR data to uncover corporate filing trends, potential compliance issues, and data-driven insights.
       </p>
-      <!-- Project Details / Progress So Far -->
+      <!-- Project Details -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Project Overview &amp; Goals</h4>
         <p class="mb-4">
-          This EDGAR Data Analytics project aims to deepen my understanding of large-scale financial datasets. I intend to process corporate filings to identify patterns in disclosures, detect anomalies, and build visualizations that explain how specific business sectors behave over time.
+          This project aims to deepen my understanding of large-scale financial datasets by processing corporate filings to identify disclosure patterns, detect anomalies, and build clear visualizations of business sector behaviors.
         </p>
         <h4 class="text-xl font-semibold mb-2">What I've Tried So Far</h4>
         <ul class="list-disc pl-6 mb-4">
@@ -112,40 +116,40 @@
           <li>Devising a clear taxonomy for categorizing disclosures.</li>
           <li>Ensuring data quality and consistency across forms.</li>
           <li>Inaccurate data collection from varied prompts—differences in synonyms and phrasing lead to unreliable extraction.</li>
-          <li>
-            AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. I'm evaluating whether this, a hybrid approach, or a traditional XBRL inline method is best.
-          </li>
-          <li>Limited resources as a solo developer make it challenging to refine the pipeline as thoroughly as larger teams could.</li>
+          <li>AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. I'm evaluating whether to use a hybrid or a traditional XBRL inline method.</li>
+          <li>Limited resources as a solo developer make refining the pipeline challenging.</li>
         </ul>
         <h4 class="text-xl font-semibold mb-2">Possible Solutions &amp; Future Directions</h4>
         <ul class="list-disc pl-6 mb-4">
           <li>Leveraging AWS or Google Cloud for scalable data processing.</li>
-          <li>Using a robust pipeline (e.g., Airflow or Luigi) to automate data ingestion.</li>
+          <li>Implementing a robust pipeline (e.g., Airflow or Luigi) to automate data ingestion.</li>
           <li>Exploring advanced NLP models (e.g., transformer-based) for improved accuracy.</li>
-          <li>Evaluating a hybrid approach combining AI with traditional GAAG/XBRL methods to enhance reliability.</li>
+          <li>Evaluating a hybrid approach combining AI with traditional GAAG/XBRL methods for enhanced reliability.</li>
         </ul>
         <h4 class="text-xl font-semibold mb-2">Why This Matters</h4>
         <p class="mb-4">
-          This project tackles complex data engineering challenges and experiments with applying AI to financial data analysis. The outcome will help determine best practices for small-scale teams with limited resources.
+          This project addresses complex data engineering challenges and applies AI to financial data analysis, helping determine best practices for small-scale teams.
         </p>
       </div>
+
       <!-- Technical Workflow Visualization -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Technical Workflow Visualization</h4>
         <p class="mb-4">
-          The chart below illustrates the current pipeline—from data scraping to visualization. The progress numbers reflect:
+          The chart below illustrates the current pipeline—from data scraping to visualization. The progress numbers are:
           <strong>Scraping: 80%</strong>, <strong>Parsing: 75%</strong>, <strong>Processing: 60%</strong>, <strong>Analysis: 50%</strong>, and <strong>Visualization: 40%</strong>.
-          Tooltips provide additional context about the challenges at each stage.
         </p>
         <canvas id="workflowChart" width="400" height="200"></canvas>
       </div>
+
       <!-- Code Workflow Diagram -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
         <p class="mb-4">
-          The diagram below visualizes how the EDGAR code works, from fetching data to displaying insights—similar to how teachers illustrate algorithms.
+          This diagram shows the process of data collection, parsing, cleaning, analysis, and visualization in the EDGAR project.
         </p>
         <div class="mermaid">
+%%{ init: { "theme": "default", "themeVariables": { "fontSize": "22px", "nodePadding": "20", "nodeMargin": "20" } } }%%
 graph TD
   subgraph Top_Row
     A["Start: Trigger Data Collection"]
@@ -162,6 +166,7 @@ graph TD
   D --> E
         </div>
       </div>
+
       <!-- Button Linking to the EDGAR Repo -->
       <div class="text-center">
         <a href="https://github.com/JamesPortfolioProjects/Current-Project-Data-Analytics-for-Stocks-" target="_blank"
@@ -273,4 +278,5 @@ graph TD
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
 </body>
+
 </html>
