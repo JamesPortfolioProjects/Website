@@ -8,6 +8,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Load Mermaid.js for flowchart diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -111,6 +116,24 @@
           Tooltips provide additional context about the challenges at each stage.
         </p>
         <canvas id="workflowChart" width="400" height="200"></canvas>
+      </div>
+
+      <!-- Code Workflow Diagram -->
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
+        <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
+        <p class="mb-4">
+          The diagram below visualizes how the EDGAR code works, from fetching data to displaying insights—much like how teachers illustrate algorithms such as bubble sort.
+        </p>
+        <div class="mermaid">
+          graph LR
+          A[Start: Trigger Data Collection] --> B[Scrape EDGAR Filings<br/>(using requests & BeautifulSoup)]
+          B --> C[Parse Filings into Structured Data]
+          C --> D[Clean & Standardize Data]
+          D --> E[Apply NLP Techniques<br/>(spaCy, NLTK)]
+          E --> F[Analyze Data<br/>(AI vs. GAAG/XBRL)]
+          F --> G[Generate Visualizations]
+          G --> H[Display Insights on Dashboard]
+        </div>
       </div>
 
       <!-- Button Linking to the EDGAR Repo -->
