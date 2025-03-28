@@ -3,38 +3,41 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hunter Harris - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
+    /* Initialize Mermaid with bigger font and node spacing */
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
       themeVariables: {
-        fontSize: '22px'
+        fontSize: '24px',
+        nodePadding: '20',
+        nodeMargin: '20'
+      },
+      flowchart: {
+        useMaxWidth: true
       }
     });
   </script>
+
   <style>
-    /* Increase base font size for Mermaid diagrams */
-    .mermaid {
-      font-size: 1.1rem;
-    }
-    /* Scale the entire SVG for a bigger, clearer flowchart */
+    /* Remove scaling transforms so text doesn't get cut off */
     .mermaid svg {
-      transform: scale(1.05);
-      transform-origin: top left;
-      width: 100% !important;
+      max-width: 100% !important; /* Ensures the diagram fits the container */
       height: auto !important;
     }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
+
   <!-- Header Section -->
   <header class="bg-blue-600 text-white shadow-lg p-6">
     <div class="container mx-auto flex justify-between items-center">
@@ -52,6 +55,7 @@
 
   <!-- Main Content -->
   <main class="container mx-auto px-6 py-12">
+
     <!-- About Section -->
     <section id="about" class="text-center py-20">
       <h2 class="text-5xl font-bold mb-4 text-gradient">About Me</h2>
@@ -95,11 +99,9 @@
     <!-- Current Project: EDGAR Data Analytics -->
     <section id="current-project" class="py-20 bg-gray-100 rounded-xl">
       <h3 class="text-4xl font-bold mb-8 text-center">Current Project: EDGAR Data Analytics</h3>
-      <!-- Intro Text -->
       <p class="text-center text-lg mb-6 max-w-2xl mx-auto">
         An ongoing project where I analyze SEC EDGAR data to uncover corporate filing trends, potential compliance issues, and data-driven insights.
       </p>
-      <!-- Project Details -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Project Overview &amp; Goals</h4>
         <p class="mb-4">
@@ -117,9 +119,7 @@
           <li>Devising a clear taxonomy for categorizing disclosures.</li>
           <li>Ensuring data quality and consistency across forms.</li>
           <li>Inaccurate data collection from varied prompts—differences in synonyms and phrasing lead to unreliable extraction.</li>
-          <li>
-            AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. I'm evaluating whether to use a hybrid approach or a traditional XBRL inline method.
-          </li>
+          <li>AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy.</li>
           <li>Limited resources as a solo developer make refining the pipeline challenging.</li>
         </ul>
         <h4 class="text-xl font-semibold mb-2">Possible Solutions &amp; Future Directions</h4>
@@ -152,21 +152,15 @@
           This diagram shows the process from data collection through cleaning, analysis, and visualization.
         </p>
         <div class="mermaid">
-%%{ init: { "theme": "default", "themeVariables": { "fontSize": "22px", "nodePadding": "15", "nodeMargin": "15" } } }%%
+%%{ init: { "theme": "default", "themeVariables": { "fontSize": "24px", "nodePadding": "20", "nodeMargin": "20" }, "flowchart": { "useMaxWidth": true } } }%%
 graph TD
-  subgraph [ ]
-    A[Trigger Data Collection]
-    B[Scrape EDGAR Filings using requests &amp; BeautifulSoup]
-    C[Parse Filings into Structured Data]
-    D[Clean & Standardize Data]
-  end
-  subgraph [ ]
-    E[Apply NLP Techniques (spaCy, NLTK)]
-    F[Analyze Data (AI vs. GAAG/XBRL)]
-    G[Generate Visualizations]
-    H[Display Insights on Dashboard]
-  end
-  D --> E
+    A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings<br/>using requests &amp; BeautifulSoup"]
+    B --> C["Parse Filings into<br/>Structured Data"]
+    C --> D["Clean &amp; Standardize Data"]
+    D --> E["Apply NLP Techniques<br/>(spaCy, NLTK)"]
+    E --> F["Analyze Data<br/>(AI vs. GAAG/XBRL)"]
+    F --> G["Generate Visualizations"]
+    G --> H["Display Insights<br/>on Dashboard"]
         </div>
       </div>
 
@@ -278,6 +272,7 @@ graph TD
       }
     });
 
+    // Reveal sections on scroll
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
 </body>
