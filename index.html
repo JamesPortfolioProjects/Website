@@ -124,15 +124,16 @@
         <p class="mb-4">
           The diagram below visualizes how the EDGAR code works, from fetching data to displaying insights—much like how teachers illustrate algorithms such as bubble sort.
         </p>
+        <!-- Fix: Use \n for line breaks and escape & as &amp; -->
         <div class="mermaid">
-          graph LR
-          A[Start: Trigger Data Collection] --> B[Scrape EDGAR Filings<br/>(using requests & BeautifulSoup)]
-          B --> C[Parse Filings into Structured Data]
-          C --> D[Clean & Standardize Data]
-          D --> E[Apply NLP Techniques<br/>(spaCy, NLTK)]
-          E --> F[Analyze Data<br/>(AI vs. GAAG/XBRL)]
-          F --> G[Generate Visualizations]
-          G --> H[Display Insights on Dashboard]
+graph LR
+    A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings\n(using requests &amp; BeautifulSoup)"]
+    B --> C["Parse Filings into Structured Data"]
+    C --> D["Clean &amp; Standardize Data"]
+    D --> E["Apply NLP Techniques\n(spaCy, NLTK)"]
+    E --> F["Analyze Data\n(AI vs. GAAG/XBRL)"]
+    F --> G["Generate Visualizations"]
+    G --> H["Display Insights on Dashboard"]
         </div>
       </div>
 
