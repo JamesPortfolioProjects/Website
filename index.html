@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <!-- Load Mermaid.js for flowchart diagrams -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
@@ -21,15 +20,25 @@
         nodeMargin: '10'
       },
       flowchart: {
-        useMaxWidth: true
+        useMaxWidth: false
       }
     });
   </script>
   <style>
-    /* Ensure Mermaid diagrams fit the container naturally */
-    .mermaid svg {
-      width: 100% !important;
-      height: auto !important;
+    /* Ensure Mermaid diagram fits inside its fixed container */
+    .mermaid-container {
+      width: 400px;
+      height: 200px;
+      margin: 0 auto;
+      overflow: auto;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 10px;
+      background: #fff;
+    }
+    .mermaid {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -141,14 +150,10 @@
         <canvas id="workflowChart" width="400" height="200"></canvas>
       </div>
 
-      <!-- Code Workflow Diagram -->
-      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8" style="width: 400px; height: 200px; margin: 0 auto;">
-        <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
-        <p class="mb-4">
-          This diagram shows the process from data collection through cleaning, analysis, and visualization.
-        </p>
+      <!-- Code Workflow Diagram (Fixed Container) -->
+      <div class="mermaid-container">
         <div class="mermaid">
-%%{ init: { "theme": "default", "themeVariables": { "fontSize": "14px", "nodePadding": "10", "nodeMargin": "10" }, "flowchart": { "useMaxWidth": true } } }%%
+%%{ init: { "theme": "default", "themeVariables": { "fontSize": "14px", "nodePadding": "10", "nodeMargin": "10" } } }%%
 graph TD
     A["Start: Trigger Data Collection"] --> B["Scrape EDGAR Filings<br/>using requests &amp; BeautifulSoup"]
     B --> C["Parse Filings into<br/>Structured Data"]
