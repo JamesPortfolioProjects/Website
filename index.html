@@ -2,183 +2,229 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunter Harris - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunter Harris - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
-    <!-- Header Section -->
-    <header class="bg-blue-600 text-white shadow-lg p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">I'm Hunter Harris</h1>
-            <nav>
-              <a href="#about" class="mx-3 hover:text-gray-300">About</a>
-              <a href="#projects" class="mx-3 hover:text-gray-300">Projects</a>
-              <a href="#current-project" class="mx-3 hover:text-gray-300">EDGAR Project</a>
-              <a href="#engineering" class="mx-3 hover:text-gray-300">Engineering Demo</a>
-              <a href="#contact" class="mx-3 hover:text-gray-300">Contact</a>
-            </nav>
+  <!-- Header Section -->
+  <header class="bg-blue-600 text-white shadow-lg p-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">I'm Hunter Harris</h1>
+      <nav>
+        <a href="#about" class="mx-3 hover:text-gray-300">About</a>
+        <a href="#projects" class="mx-3 hover:text-gray-300">Projects</a>
+        <a href="#current-project" class="mx-3 hover:text-gray-300">EDGAR Project</a>
+        <a href="#engineering" class="mx-3 hover:text-gray-300">Engineering Demo</a>
+        <a href="#contact" class="mx-3 hover:text-gray-300">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12">
+    <!-- About Section -->
+    <section id="about" class="text-center py-20">
+      <h2 class="text-5xl font-bold mb-4 text-gradient">About Me</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        A military veteran, builder, designer, and problem-solver currently studying at Louisiana Tech University. Passionate about using data science and engineering to solve real-world problems in meaningful, impactful ways.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <h3 class="text-4xl font-bold mb-12 text-center text-gradient">Technical Reports</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition">
+          <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
+          <p class="mb-4">Detailed technical documentation for my IoT water quality project.</p>
+          <a href="water-tester-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
         </div>
-    </header>
+        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition">
+          <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
+          <p class="mb-4">In-depth explanation of the AI-based eye tracking project.</p>
+          <a href="ai-eye-tracker-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition">
+          <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
+          <p class="mb-4">Comprehensive breakdown of the custom smart mirror build.</p>
+          <a href="magic-mirror-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
+    <!-- Current Project: EDGAR Data Analytics -->
+    <section id="current-project" class="py-20 bg-gray-100 rounded-xl">
+      <h3 class="text-4xl font-bold mb-8 text-center">Current Project: EDGAR Data Analytics</h3>
 
-        <!-- About Section -->
-        <section id="about" class="text-center py-20">
-            <h2 class="text-5xl font-bold mb-4 text-gradient">About Me</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">A military veteran, builder, designer, and problem-solver currently studying at Louisiana Tech University. Passionate about using data science and engineering to solve real-world problems in meaningful, impactful ways.</p>
-        </section>
+      <!-- Intro Text -->
+      <p class="text-center text-lg mb-6 max-w-2xl mx-auto">
+        An ongoing project where I analyze SEC EDGAR data to uncover corporate filing trends, potential compliance issues, and data-driven insights.
+      </p>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <h3 class="text-4xl font-bold mb-12 text-center text-gradient">Technical Reports</h3>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition">
-                    <h4 class="text-2xl font-bold mb-3">Water Quality Tester</h4>
-                    <p class="mb-4">Detailed technical documentation for my IoT water quality project.</p>
-                    <a href="water-tester-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition">
-                    <h4 class="text-2xl font-bold mb-3">AI Eye Tracker</h4>
-                    <p class="mb-4">In-depth explanation of the AI-based eye tracking project.</p>
-                    <a href="ai-eye-tracker-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition">
-                    <h4 class="text-2xl font-bold mb-3">Magic Mirror</h4>
-                    <p class="mb-4">Comprehensive breakdown of the custom smart mirror build.</p>
-                    <a href="magic-mirror-report.html" class="text-blue-600 hover:underline">Read Technical Report</a>
-                </div>
-            </div>
-        </section>
+      <!-- Project Details / Progress So Far -->
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
+        <h4 class="text-2xl font-semibold mb-4">Project Overview &amp; Goals</h4>
+        <p class="mb-4">
+          This EDGAR Data Analytics project aims to deepen my understanding of large-scale financial datasets. I intend to process corporate filings to identify patterns in disclosures, detect anomalies, and build visualizations that explain how specific business sectors behave over time.
+        </p>
+        <h4 class="text-xl font-semibold mb-2">What I've Tried So Far</h4>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Gathered a sample set of 10-K filings to familiarize myself with EDGAR’s structure.</li>
+          <li>Experimented with Python libraries (e.g., <code>requests</code>, <code>BeautifulSoup</code>) to scrape and parse forms.</li>
+          <li>Prototyped NLP techniques (e.g., <code>spaCy</code>, <code>NLTK</code>) for text analysis.</li>
+        </ul>
+        <h4 class="text-xl font-semibold mb-2">Current Challenges</h4>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Handling very large filing datasets efficiently.</li>
+          <li>Devising a clear taxonomy for categorizing disclosures.</li>
+          <li>Ensuring data quality and consistency across forms.</li>
+          <li>Inaccurate data collection from varied prompts—differences in synonyms and phrasing lead to unreliable extraction.</li>
+          <li>
+            AI Workaround Issues: My attempt to use AI (with models like Cohere) instead of traditional GAAG tags has resulted in inconsistent accuracy. Uncertainty remains whether this approach, a hybrid, or a traditional XBRL inline method is best.
+          </li>
+          <li>Limited resources as a solo developer, making it challenging to refine the pipeline as thoroughly as larger teams could.</li>
+        </ul>
+        <h4 class="text-xl font-semibold mb-2">Possible Solutions &amp; Future Directions</h4>
+        <ul class="list-disc pl-6 mb-4">
+          <li>Leveraging AWS or Google Cloud for scalable data processing.</li>
+          <li>Using a robust pipeline (e.g., Airflow or Luigi) to automate data ingestion.</li>
+          <li>Exploring advanced NLP models (e.g., transformer-based) for improved accuracy.</li>
+          <li>Evaluating a hybrid approach combining AI with traditional GAAG/XBRL methods to enhance reliability.</li>
+        </ul>
+        <h4 class="text-xl font-semibold mb-2">Why This Matters</h4>
+        <p class="mb-4">
+          This project tackles complex data engineering challenges and experiments with applying AI to financial data analysis. The outcome will help determine best practices for small-scale teams with limited resources.
+        </p>
+      </div>
 
-        <!-- Current Project: EDGAR Data Analytics -->
-<section id="current-project" class="py-20 bg-gray-100 rounded-xl">
-  <h3 class="text-4xl font-bold mb-8 text-center">Current Project: EDGAR Data Analytics</h3>
+      <!-- Technical Workflow Visualization -->
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
+        <h4 class="text-2xl font-semibold mb-4">Technical Workflow Visualization</h4>
+        <p class="mb-4">
+          The chart below illustrates the current pipeline from data scraping to visualization. Each stage highlights specific challenges that impact overall progress.
+        </p>
+        <canvas id="workflowChart" width="400" height="200"></canvas>
+      </div>
 
-  <!-- Intro Text -->
-  <p class="text-center text-lg mb-6 max-w-2xl mx-auto">
-    An ongoing project where I analyze SEC EDGAR data to uncover corporate filing trends, potential compliance issues, and data-driven insights.
-  </p>
+      <!-- Button Linking to the EDGAR Repo -->
+      <div class="text-center">
+        <a href="https://github.com/JamesPortfolioProjects/Current-Project-Data-Analytics-for-Stocks-" target="_blank"
+          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
+          View EDGAR Repo on GitHub
+        </a>
+      </div>
+    </section>
 
-  <!-- Project Details / Progress So Far -->
-  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
-    <h4 class="text-2xl font-semibold mb-4">Project Overview & Goals</h4>
-    <p class="mb-4">
-      This EDGAR Data Analytics project aims to deepen my understanding of large-scale financial datasets. I intend to process corporate filings to identify patterns in disclosures, detect anomalies, and build visualizations that explain how specific business sectors behave over time.
-    </p>
-    <h4 class="text-xl font-semibold mb-2">What I've Tried So Far</h4>
-    <ul class="list-disc pl-6 mb-4">
-      <li>Gathered a sample set of 10-K filings to familiarize myself with EDGAR’s structure.</li>
-      <li>Experimented with Python libraries (e.g., <code>requests</code>, <code>BeautifulSoup</code>) to scrape and parse forms.</li>
-      <li>Prototyped NLP techniques (e.g., <code>spaCy</code>, <code>NLTK</code>) for text analysis.</li>
-    </ul>
-    <h4 class="text-xl font-semibold mb-2">Current Challenges</h4>
-    <ul class="list-disc pl-6 mb-4">
-      <li>Handling very large filing datasets efficiently.</li>
-      <li>Devising a clear taxonomy for categorizing disclosures.</li>
-      <li>Ensuring data quality and consistency across forms.</li>
-    </ul>
-    <h4 class="text-xl font-semibold mb-2">Possible Solutions</h4>
-    <ul class="list-disc pl-6 mb-4">
-      <li>Leveraging AWS or Google Cloud for scalable data processing.</li>
-      <li>Using a robust pipeline (e.g., Airflow or Luigi) to automate data ingestion.</li>
-      <li>Exploring advanced NLP models (e.g., transformer-based) for more accurate text classification.</li>
-    </ul>
-    <h4 class="text-xl font-semibold mb-2">Why This Matters</h4>
-    <p class="mb-4">
-      This project is not only a deep dive into real-world data engineering challenges but also a chance to generate meaningful insights that could help investors, analysts, and researchers understand complex corporate filings more easily.
-    </p>
-  </div>
+    <!-- Software Engineering Interactive Demo Section -->
+    <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
+      <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
+      <p class="text-center text-lg mb-6">
+        Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!
+      </p>
+      <!-- User Input for Sorting -->
+      <div class="flex justify-center mb-8">
+        <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
+        <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">
+          Run Demo
+        </button>
+      </div>
+      <!-- Output Section -->
+      <div id="demoOutput" class="hidden text-center">
+        <p class="text-xl mb-4">Sorted Numbers:</p>
+        <div id="outputChartContainer" class="mb-8">
+          <canvas id="outputChart" width="400" height="200"></canvas>
+        </div>
+        <p class="text-lg">Click 'Run Demo' again to try a new set of numbers!</p>
+      </div>
+    </section>
 
-  <!-- Visualization Section -->
-  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
-    <h4 class="text-2xl font-semibold mb-4">Workflow Visualization</h4>
-    <canvas id="workflowChart" width="400" height="200"></canvas>
-  </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <h3 class="text-4xl font-bold mb-6 text-center">Let's Connect</h3>
+      <div class="text-center space-x-6">
+        <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">
+          LinkedIn
+        </a>
+        <a href="https://github.com/JamesPortfolioProjects" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">
+          GitHub
+        </a>
+      </div>
+    </section>
+  </main>
 
-  <!-- Button Linking to the EDGAR Repo -->
-  <div class="text-center">
-    <a href="https://github.com/JamesPortfolioProjects/Current-Project-Data-Analytics-for-Stocks-" target="_blank"
-       class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
-      View EDGAR Repo on GitHub
-    </a>
-  </div>
-</section>
+  <!-- Footer Section -->
+  <footer class="text-center p-6 mt-10 bg-white shadow-inner">
+    <p>&copy; 2025 Hunter Harris — Built with curiosity, passion, and coffee ☕</p>
+  </footer>
 
-<!-- Visualization Script -->
-<script>
-  const ctx = document.getElementById('workflowChart').getContext('2d');
-  const workflowChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Scraping', 'Parsing', 'Processing', 'Analysis', 'Visualization'],
-      datasets: [{
-        label: 'Progress (%)',
-        data: [80, 70, 50, 60, 40], // Update these values as your project progresses
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      indexAxis: 'y', // This makes the bar chart horizontal
-      scales: {
-        x: {
-          beginAtZero: true,
-          max: 100
+  <!-- Visualization & Scroll Reveal Scripts -->
+  <script>
+    // Workflow Chart for EDGAR project
+    const ctx = document.getElementById('workflowChart').getContext('2d');
+    const workflowChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Scraping', 'Parsing', 'Processing', 'Analysis', 'Visualization'],
+        datasets: [{
+          label: 'Progress (%)',
+          data: [80, 70, 50, 60, 40], // Update these values as your project evolves
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        indexAxis: 'y', // Makes the bar chart horizontal
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const stage = context.label;
+                let challenge = '';
+                switch (stage) {
+                  case 'Scraping':
+                    challenge = 'Inconsistent prompt responses';
+                    break;
+                  case 'Parsing':
+                    challenge = 'Synonym variations causing errors';
+                    break;
+                  case 'Processing':
+                    challenge = 'AI model inaccuracies (e.g., Cohere)';
+                    break;
+                  case 'Analysis':
+                    challenge = 'Comparing AI vs. GAAG/XBRL methods';
+                    break;
+                  case 'Visualization':
+                    challenge = 'Mapping technical progress clearly';
+                    break;
+                  default:
+                    challenge = '';
+                }
+                return context.dataset.label + ': ' + context.parsed.x + '% (' + challenge + ')';
+              }
+            }
+          }
         }
       }
-    }
-  });
-</script>
+    });
 
-
-
-        <!-- Software Engineering Interactive Demo Section -->
-        <section id="engineering" class="py-20 bg-gray-50 rounded-xl">
-            <h3 class="text-4xl font-bold mb-8 text-center text-gradient">Software Engineering Interactive Demo</h3>
-            <p class="text-center text-lg mb-6">Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!</p>
-
-            <!-- User Input for Sorting -->
-            <div class="flex justify-center mb-8">
-                <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
-                <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">Run Demo</button>
-            </div>
-
-            <!-- Output Section -->
-            <div id="demoOutput" class="hidden text-center">
-                <p class="text-xl mb-4">Sorted Numbers:</p>
-                <div id="outputChartContainer" class="mb-8">
-                    <canvas id="outputChart" width="400" height="200"></canvas>
-                </div>
-                <p class="text-lg">Click 'Run Demo' again to try a new set of numbers!</p>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20">
-            <h3 class="text-4xl font-bold mb-6 text-center">Let's Connect</h3>
-            <div class="text-center space-x-6">
-                <a href="mailto:importantemailsforjames@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">Email Me</a>
-                <a href="https://www.linkedin.com/in/hunter-harris-33237a293" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700">LinkedIn</a>
-                <a href="https://github.com/JamesPortfolioProjects" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700">GitHub</a>
-            </div>
-        </section>
-
-    <footer class="text-center p-6 mt-10 bg-white shadow-inner">
-        <p>&copy; 2025 Hunter Harris — Built with curiosity, passion, and coffee ☕</p>
-    </footer>
-
-
-    <script>
-        ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
-    </script>
+    // Scroll Reveal for sections
+    ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
+  </script>
 </body>
 
 </html>
