@@ -20,11 +20,9 @@
     });
   </script>
   <style>
-    /* Increase the base font size inside Mermaid diagrams */
     .mermaid {
       font-size: 1.1rem;
     }
-    /* Optionally scale the entire SVG for a bigger flowchart */
     .mermaid svg {
       transform: scale(1.05);
       transform-origin: top left;
@@ -131,7 +129,6 @@
           This project tackles complex data engineering challenges and experiments with applying AI to financial data analysis. The outcome will help determine best practices for small-scale teams with limited resources.
         </p>
       </div>
-
       <!-- Technical Workflow Visualization -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Technical Workflow Visualization</h4>
@@ -142,7 +139,6 @@
         </p>
         <canvas id="workflowChart" width="400" height="200"></canvas>
       </div>
-
       <!-- Code Workflow Diagram -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
@@ -153,20 +149,19 @@
 graph TD
   subgraph Top_Row
     A["Start: Trigger Data Collection"]
-    B["Scrape EDGAR Filings\nusing requests &amp; BeautifulSoup"]
+    B["Scrape EDGAR Filings using requests &amp; BeautifulSoup"]
     C["Parse Filings into Structured Data"]
-    D["Clean &amp; Standardize Data"]
+    D["Clean & Standardize Data"]
   end
   subgraph Bottom_Row
-    E["Apply NLP Techniques\nspaCy, NLTK"]
-    F["Analyze Data\nAI vs. GAAG/XBRL"]
+    E["Apply NLP Techniques (spaCy, NLTK)"]
+    F["Analyze Data (AI vs. GAAG/XBRL)"]
     G["Generate Visualizations"]
     H["Display Insights on Dashboard"]
   end
   D --> E
         </div>
       </div>
-
       <!-- Button Linking to the EDGAR Repo -->
       <div class="text-center">
         <a href="https://github.com/JamesPortfolioProjects/Current-Project-Data-Analytics-for-Stocks-" target="_blank"
@@ -182,14 +177,12 @@ graph TD
       <p class="text-center text-lg mb-6">
         Try out this sorting algorithm demo. Input some numbers and see the sorting algorithm in action!
       </p>
-      <!-- User Input for Sorting -->
       <div class="flex justify-center mb-8">
         <input type="text" id="inputNumbers" class="px-4 py-2 rounded-lg border border-gray-300" placeholder="Enter numbers separated by commas" />
         <button id="runDemoButton" class="bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 ml-4">
           Run Demo
         </button>
       </div>
-      <!-- Output Section -->
       <div id="demoOutput" class="hidden text-center">
         <p class="text-xl mb-4">Sorted Numbers:</p>
         <div id="outputChartContainer" class="mb-8">
@@ -223,7 +216,6 @@ graph TD
 
   <!-- Visualization & Scroll Reveal Scripts -->
   <script>
-    // Workflow Chart for EDGAR project
     const ctx = document.getElementById('workflowChart').getContext('2d');
     const workflowChart = new Chart(ctx, {
       type: 'bar',
@@ -277,9 +269,8 @@ graph TD
         }
       }
     });
-    // Scroll Reveal for sections
+
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
 </body>
-
 </html>
