@@ -15,7 +15,7 @@
       startOnLoad: true,
       theme: 'default',
       themeVariables: {
-        fontSize: '18px'
+        fontSize: '20px'
       }
     });
   </script>
@@ -92,12 +92,10 @@
     <!-- Current Project: EDGAR Data Analytics -->
     <section id="current-project" class="py-20 bg-gray-100 rounded-xl">
       <h3 class="text-4xl font-bold mb-8 text-center">Current Project: EDGAR Data Analytics</h3>
-
       <!-- Intro Text -->
       <p class="text-center text-lg mb-6 max-w-2xl mx-auto">
         An ongoing project where I analyze SEC EDGAR data to uncover corporate filing trends, potential compliance issues, and data-driven insights.
       </p>
-
       <!-- Project Details / Progress So Far -->
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Project Overview &amp; Goals</h4>
@@ -149,31 +147,24 @@
       <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-6 mb-8">
         <h4 class="text-2xl font-semibold mb-4">Code Workflow Diagram</h4>
         <p class="mb-4">
-          The diagram below visualizes how the EDGAR code works, from fetching data to displaying insights—much like how teachers illustrate algorithms such as bubble sort.
+          The diagram below visualizes how the EDGAR code works, from fetching data to displaying insights—similar to how teachers illustrate algorithms.
         </p>
         <div class="mermaid">
-graph LR
-  %% Define each node on a separate line
-  A[Start: Trigger Data Collection]
-  B[Scrape EDGAR Filings\n(using requests &amp; BeautifulSoup)]
-  C[Parse Filings into Structured Data]
-  D[Clean &amp; Standardize Data]
-  E[Apply NLP Techniques\n(spaCy, NLTK)]
-  F[Analyze Data\n(AI vs. GAAG/XBRL)]
-  G[Generate Visualizations]
-  H[Display Insights on Dashboard]
-
-  %% Define the connections between nodes
-  A --> B
-  B --> C
-  C --> D
+graph TD
+  subgraph Top_Row
+    A["Start: Trigger Data Collection"]
+    B["Scrape EDGAR Filings\nusing requests &amp; BeautifulSoup"]
+    C["Parse Filings into Structured Data"]
+    D["Clean &amp; Standardize Data"]
+  end
+  subgraph Bottom_Row
+    E["Apply NLP Techniques\nspaCy, NLTK"]
+    F["Analyze Data\nAI vs. GAAG/XBRL"]
+    G["Generate Visualizations"]
+    H["Display Insights on Dashboard"]
+  end
   D --> E
-  E --> F
-  F --> G
-  G --> H
-</div>
-
-
+        </div>
       </div>
 
       <!-- Button Linking to the EDGAR Repo -->
@@ -247,7 +238,7 @@ graph LR
         }]
       },
       options: {
-        indexAxis: 'y', // Makes the bar chart horizontal
+        indexAxis: 'y',
         scales: {
           x: {
             beginAtZero: true,
@@ -286,7 +277,6 @@ graph LR
         }
       }
     });
-
     // Scroll Reveal for sections
     ScrollReveal().reveal('section', { delay: 200, distance: '60px', origin: 'bottom', reset: true });
   </script>
